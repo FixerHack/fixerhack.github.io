@@ -196,19 +196,9 @@ me.say_hi()
   <a href="mailto:your.email@example.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/yourprofile">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://instagram.com/yourprofile">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/fixerhack"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" width="40" height="40" alt="GitHub"/></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://t.me/yourusername"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" width="40" height="40" alt="Telegram"/></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://instagram.com/yourprofile"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="40" height="40" alt="Instagram"/></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://twitter.com/yourprofile"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="40" height="40" alt="Twitter"/></a>
 </p>
 
 ---
