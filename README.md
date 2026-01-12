@@ -12,17 +12,21 @@
   <img width="98%" src="https://github-profile-trophy.vercel.app/?username=fixerhack&row=4&theme=algolia&no-frame=true&no-bg=true&margin-w=4"/>
 </div>
 
-<div align="center">
-  
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fixerhack&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF)
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fixerhack&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&text_color=FFFFFF)
-  
-</div>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=fixerhack&theme=radical&hide_border=true&background=0D1117&ring=FFD700&fire=FFD700&currStreakLabel=FFD700" />
-</p>
+<table align="center">
+<tr>
+<td width="50%">
+<img src="https://github-readme-stats.vercel.app/api?username=fixerhack&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF" />
+</td>
+<td width="50%">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=fixerhack&theme=radical&hide_border=true&background=0D1117&ring=FFD700&fire=FFD700&currStreakLabel=FFD700" />
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fixerhack&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&text_color=FFFFFF" />
+</td>
+</tr>
+</table>
 
 ---
 
@@ -38,55 +42,71 @@
 
 ---
 
-## 💻 Tech Stack & Languages
+## 💻 Tech Stack
+
+<table align="center">
+<tr>
+<td align="center" width="50%">
+
+### 🔤 Languages
 
 <p align="center">
-  
-  ### Languages
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-  
-  ### Frameworks & Libraries
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Telegram_Bot_API-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pyrogram-3776AB?style=for-the-badge&logo=telegram&logoColor=white" />
-  
-  ### Tools & Platforms
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=for-the-badge&logo=raspberry-pi&logoColor=white" />
-  
-  ### Databases
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  
-  ### Other
-  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white" />
-  <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
-  <img src="https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
-  
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
 </p>
 
+</td>
+<td align="center" width="50%">
+
+### 📚 Frameworks & Libraries
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="docker" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="60" height="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="60" height="60"/>
+<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/Express-404D59?style=flat-square&logo=express&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Telegram_Bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white" />
+<img src="https://img.shields.io/badge/Pyrogram-3776AB?style=flat-square&logo=telegram&logoColor=white" />
 </p>
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+### 🛠️ Tools & Platforms
+
+<p align="center">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+<br/>
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" />
+<img src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberry-pi&logoColor=white" />
+</p>
+
+</td>
+<td align="center">
+
+### 🗄️ Databases & Other
+
+<p align="center">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=flat-square&logo=home-assistant&logoColor=white" />
+<img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=selenium&logoColor=white" />
+</p>
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -128,14 +148,20 @@ me.say_hi()
 
 ## 📈 GitHub Activity Graph
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=fixerhack&theme=radical" />
-</div>
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=fixerhack&theme=react-dark&hide_border=true&bg_color=0D1117&color=FFD700&line=3A86FF&point=FFD700" />
+</p>
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=fixerhack&theme=radical" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=fixerhack&theme=radical" />
-</div>
+<table align="center">
+<tr>
+<td width="50%">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=fixerhack&theme=radical" />
+</td>
+<td width="50%">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=fixerhack&theme=radical" />
+</td>
+</tr>
+</table>
 
 ---
 
@@ -176,32 +202,45 @@ me.say_hi()
 </p>
 
 <p align="center">
-  <a href="https://github.com/fixerhack">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" width="40" height="40" />
-  </a>
-  <a href="https://t.me/yourusername">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" width="40" height="40" />
-  </a>
-  <a href="https://instagram.com/yourprofile">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="40" height="40" />
-  </a>
-  <a href="https://twitter.com/yourprofile">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="40" height="40" />
-  </a>
+  <a href="https://github.com/fixerhack"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" width="40" height="40" alt="GitHub"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://t.me/yourusername"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" width="40" height="40" alt="Telegram"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://instagram.com/yourprofile"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="40" height="40" alt="Instagram"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://twitter.com/yourprofile"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="40" height="40" alt="Twitter"/></a>
 </p>
 
 ---
 
 ## 💼 Featured Projects
 
-<div align="center">
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-telegram-bot&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-telegram-bot)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-web-app&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-web-app)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-automation-tool&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-automation-tool)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-security-tool&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-security-tool)
-
-</div>
+<table align="center">
+<tr>
+<td width="50%">
+<a href="https://github.com/fixerhack/your-telegram-bot">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-telegram-bot&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF" />
+</a>
+</td>
+<td width="50%">
+<a href="https://github.com/fixerhack/your-web-app">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-web-app&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF" />
+</a>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="https://github.com/fixerhack/your-automation-tool">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-automation-tool&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF" />
+</a>
+</td>
+<td width="50%">
+<a href="https://github.com/fixerhack/your-security-tool">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-security-tool&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF" />
+</a>
+</td>
+</tr>
+</table>
 
 ---
 
