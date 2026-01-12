@@ -1,290 +1,254 @@
-# 🚀 Візитівка FixerHack - Portfolio Site
+# 👋 Hey there! I'm FixerHack
 
-Сучасний одностороковий сайт-візитівка з анімаціями та інтерактивними елементами.
-
-## ✨ Особливості
-
-- 🎨 Унікальний дизайн з темною темою
-- ✨ Плавні анімації та ефекти паралаксу
-- 📱 Адаптивний дизайн (працює на всіх пристроях)
-- ⚡ Швидке завантаження (одна HTML сторінка)
-- 🎯 Готовий до деплою на GitHub Pages
-
-## 🛠️ Що включено
-
-- `index.html` - головна сторінка сайту (HTML версія)
-- `portfolio-card.jsx` - React компонент (для інтеграції в React проекти)
-- `README.md` - ця інструкція
-
-## 📦 Швидкий старт для GitHub Pages
-
-### Крок 1: Створи репозиторій
-
-1. Перейди на https://github.com/new
-2. Назви репозиторій: `username.github.io` (замість `username` вкажи своє ім'я користувача)
-   - Наприклад: `fixerhack.github.io`
-3. Зроби репозиторій публічним (Public)
-4. Натисни "Create repository"
-
-### Крок 2: Завантаж файли
-
-```bash
-# Клонуй репозиторій
-git clone https://github.com/username/username.github.io.git
-cd username.github.io
-
-# Скопіюй index.html в корінь репозиторія
-# (або створи файл та вставте код)
-
-# Додай файли до Git
-git add .
-git commit -m "Initial commit: Portfolio site"
-git push origin main
-```
-
-### Крок 3: Активуй GitHub Pages
-
-1. Перейди в Settings репозиторія
-2. Знайди розділ "Pages" в лівому меню
-3. В "Source" вибери "main" branch
-4. Натисни "Save"
-5. Через 1-2 хвилини сайт буде доступний за адресою: `https://username.github.io`
-
-## 🎨 Кастомізація
-
-### Зміна особистих даних
-
-Відкрий `index.html` та знайди наступні рядки:
-
-```html
-<!-- Ім'я -->
-<h1 class="name" id="mainName">FixerHack</h1>
-
-<!-- Підзаголовок -->
-<p class="subtitle">
-  Freelance Developer & Tech Innovator
-</p>
-
-<!-- Опис -->
-<span class="description-text">
-  Створюю телеграм-боти, веб-додатки та автоматізацію.
-  Спеціалізуюся на безпеці, інтеграціях та нестандартних рішеннях.
-</span>
-```
-
-### Зміна навичок (Tech Stack)
-
-Знайди секцію з навичками:
-
-```html
-<div class="skills-grid">
-  <span class="skill-tag">React</span>
-  <span class="skill-tag">Node.js</span>
-  <!-- Додай свої навички тут -->
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=FFD700&center=true&vCenter=true&width=940&lines=Freelance+Developer+%26+Tech+Innovator;Telegram+Bots+%7C+Web+Apps+%7C+Automation;Building+Custom+Solutions" alt="Typing SVG" />
 </div>
-```
-
-### Зміна контактів
-
-```html
-<!-- GitHub -->
-<a href="https://github.com/fixerhack" target="_blank" ...>
-
-<!-- Email -->
-<a href="mailto:your.email@example.com" ...>
-```
-
-### Зміна кольорів
-
-В `<style>` секції знайди:
-
-```css
-/* Основні кольори */
-background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);
-
-/* Акцентні кольори */
-#ffd700  /* Золотий */
-#3a86ff  /* Синій */
-#00ff7f  /* Зелений (статус) */
-```
-
-## 🔧 Додаткові налаштування
-
-### Додавання favicon
-
-1. Створи іконку (16x16, 32x32 або 64x64 пікселів)
-2. Збережи як `favicon.ico`
-3. Помісти в корінь репозиторія
-4. Додай в `<head>`:
-
-```html
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-```
-
-### Додавання Google Analytics
-
-```html
-<!-- Перед </head> -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-```
-
-### Додавання Open Graph мета-тегів
-
-```html
-<meta property="og:title" content="FixerHack - Freelance Developer">
-<meta property="og:description" content="Створюю телеграм-боти та веб-додатки">
-<meta property="og:image" content="https://username.github.io/preview.png">
-<meta property="og:url" content="https://username.github.io">
-```
-
-## 📱 Використання React компонента
-
-Якщо хочеш використати версію на React:
-
-```bash
-# Встанови залежності
-npm install lucide-react
-
-# Імпортуй компонент
-import PortfolioCard from './portfolio-card';
-
-function App() {
-  return <PortfolioCard />;
-}
-```
-
-## 🎯 Додаткові секції
-
-### Додати розділ "Проекти"
-
-```html
-<div class="projects" style="margin-bottom: 48px;">
-  <h2 class="section-title">
-    <i data-lucide="briefcase" width="16" height="16" style="color: #ffd700;"></i>
-    Проекти
-  </h2>
-  <div style="display: grid; gap: 20px;">
-    <div class="project-card" style="
-      padding: 20px;
-      background: rgba(58, 134, 255, 0.05);
-      border: 1px solid rgba(58, 134, 255, 0.2);
-      border-radius: 12px;
-    ">
-      <h3 style="color: #ffd700; margin-bottom: 10px;">Назва проекту</h3>
-      <p style="color: #b8c5db; margin-bottom: 15px;">Опис проекту</p>
-      <a href="#" style="color: #3a86ff;">Переглянути →</a>
-    </div>
-  </div>
-</div>
-```
-
-### Додати соціальні мережі
-
-```html
-<!-- Telegram -->
-<a href="https://t.me/username" class="contact-btn contact-btn-telegram">
-  <i data-lucide="send" width="20" height="20"></i>
-  Telegram
-</a>
-
-<!-- LinkedIn -->
-<a href="https://linkedin.com/in/username" class="contact-btn">
-  <i data-lucide="linkedin" width="20" height="20"></i>
-  LinkedIn
-</a>
-```
-
-І додай стилі:
-
-```css
-.contact-btn-telegram {
-  background: rgba(0, 136, 204, 0.1);
-  border: 2px solid rgba(0, 136, 204, 0.3);
-  color: #0088cc;
-}
-
-.contact-btn-telegram:hover {
-  background: rgba(0, 136, 204, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
-}
-```
-
-## 🐛 Troubleshooting
-
-### Сайт не відображається
-
-1. Перевір що файл називається `index.html` (не Index.html)
-2. Перевір що GitHub Pages активовано в Settings
-3. Почекай 5-10 хвилин після першого push
-4. Очисти кеш браузера (Ctrl+Shift+R)
-
-### Анімації не працюють
-
-1. Перевір що браузер підтримує CSS animations
-2. Відкрий Developer Console (F12) та подивись на помилки
-3. Перевір що Lucide Icons завантажились
-
-### Іконки не відображаються
-
-Перевір що цей рядок є в HTML перед `</body>`:
-
-```html
-<script>
-  lucide.createIcons();
-</script>
-```
-
-## 📚 Корисні посилання
-
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [Lucide Icons](https://lucide.dev/icons/)
-- [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)
-- [Tailwind Colors](https://tailwindcss.com/docs/customizing-colors)
-
-## 💡 Поради
-
-1. **Оптимізація завантаження**: Всі стилі в одному файлі = швидке завантаження
-2. **SEO**: Додай мета-теги для кращої індексації
-3. **Accessibility**: Всі кнопки та лінки мають правильні ARIA атрибути
-4. **Performance**: Анімації використовують CSS, не JavaScript
-5. **Mobile-first**: Дизайн адаптується під всі екрани
-
-## 🎨 Альтернативні теми
-
-### Світла тема
-
-Заміни кольори фону:
-
-```css
-body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  color: #2d3748;
-}
-```
-
-### Мінімалістична
-
-Вимкни glow-orbs та зменш анімації:
-
-```css
-.glow-orb-1, .glow-orb-2 {
-  display: none;
-}
-```
-
-## 📄 Ліцензія
-
-Використовуй вільно для своїх проектів!
 
 ---
 
-**Створено з ❤️ для FixerHack**
+### 🏆 GitHub Statistics 🏆
 
-Якщо виникнуть питання - пиши!
+<div align="center">
+  <img width="98%" src="https://github-profile-trophy.vercel.app/?username=fixerhack&row=4&theme=algolia&no-frame=true&no-bg=true&margin-w=4"/>
+</div>
+
+<div align="center">
+  
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=fixerhack&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&icon_color=FFD700&text_color=FFFFFF)
+  
+  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=fixerhack&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FFD700&text_color=FFFFFF)
+  
+</div>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=fixerhack&theme=radical&hide_border=true&background=0D1117&ring=FFD700&fire=FFD700&currStreakLabel=FFD700" />
+</p>
+
+---
+
+### 📊 Profile Views & Activity
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=fixerhack&label=Profile%20Views&color=FFD700&style=for-the-badge" alt="Profile Views" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=fixerhack&theme=react-dark&hide_border=true&bg_color=0D1117&color=FFD700&line=3A86FF&point=FFD700" />
+</p>
+
+---
+
+## 💻 Tech Stack & Languages
+
+<p align="center">
+  
+  ### Languages
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  
+  ### Frameworks & Libraries
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Telegram_Bot_API-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pyrogram-3776AB?style=for-the-badge&logo=telegram&logoColor=white" />
+  
+  ### Tools & Platforms
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=for-the-badge&logo=raspberry-pi&logoColor=white" />
+  
+  ### Databases
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  
+  ### Other
+  <img src="https://img.shields.io/badge/Home_Assistant-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white" />
+  <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
+  <img src="https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="docker" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="60" height="60"/>
+</p>
+
+---
+
+## 🚀 What I Do
+
+```python
+class FixerHack:
+    def __init__(self):
+        self.username = "FixerHack"
+        self.role = "Freelance Developer"
+        self.location = "Ukraine 🇺🇦"
+        self.languages = ["Python", "JavaScript", "TypeScript", "Bash"]
+        
+    def specializations(self):
+        return {
+            "telegram_bots": ["Pyrogram", "Telethon", "Bot API"],
+            "web_development": ["React", "Node.js", "Express"],
+            "automation": ["Selenium", "Web Scraping", "Task Automation"],
+            "security": ["Security Tools", "Chrome Extensions", "Auth Systems"],
+            "iot": ["Home Assistant", "Raspberry Pi", "Smart Home"]
+        }
+    
+    def current_projects(self):
+        return [
+            "Telegram freelance marketplace bot",
+            "Home automation system",
+            "Custom web applications",
+            "Security tools development"
+        ]
+    
+    def say_hi(self):
+        print("Thanks for dropping by! Let's build something amazing together!")
+
+me = FixerHack()
+me.say_hi()
+```
+
+---
+
+## 📈 GitHub Activity Graph
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=fixerhack&theme=radical" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=fixerhack&theme=radical" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=fixerhack&theme=radical" />
+</div>
+
+---
+
+## 🏅 Achievements & Badges
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Build-Passing-success?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Maintained-Yes-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Tested_On-Termux-FF6C37?style=for-the-badge&logo=linux" />
+  <img src="https://img.shields.io/badge/Tested_On-Kali_Linux-557C94?style=for-the-badge&logo=kali-linux" />
+  <img src="https://img.shields.io/badge/Tested_On-Ubuntu-E95420?style=for-the-badge&logo=ubuntu" />
+  <img src="https://img.shields.io/badge/Tested_On-Debian-A81D33?style=for-the-badge&logo=debian" />
+  <img src="https://img.shields.io/badge/Tested_On-Raspberry_Pi-A22846?style=for-the-badge&logo=raspberry-pi" />
+</p>
+
+---
+
+## 📫 Connect With Me
+
+<p align="center">
+  <a href="https://github.com/fixerhack">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://t.me/yourusername">
+    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
+  </a>
+  <a href="mailto:your.email@example.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/yourprofile">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/fixerhack">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" width="40" height="40" />
+  </a>
+  <a href="https://t.me/yourusername">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" width="40" height="40" />
+  </a>
+  <a href="https://instagram.com/yourprofile">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="40" height="40" />
+  </a>
+  <a href="https://twitter.com/yourprofile">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="40" height="40" />
+  </a>
+</p>
+
+---
+
+## 💼 Featured Projects
+
+<div align="center">
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-telegram-bot&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-telegram-bot)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-web-app&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-web-app)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-automation-tool&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-automation-tool)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=fixerhack&repo=your-security-tool&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/fixerhack/your-security-tool)
+
+</div>
+
+---
+
+## 🎯 Current Focus
+
+- 🔭 Working on advanced Telegram bot solutions
+- 🌱 Exploring AI integration in automation
+- 👯 Looking to collaborate on open source projects
+- 💬 Ask me about Telegram bots, web automation, or security tools
+- ⚡ Fun fact: I love turning complex problems into simple solutions
+
+---
+
+## 📊 Weekly Development Breakdown
+
+<!--START_SECTION:waka-->
+```text
+Python       12 hrs 30 mins  ████████████░░░░░░░░░   48.5%
+JavaScript   8 hrs 15 mins   ████████░░░░░░░░░░░░░   32.1%
+TypeScript   3 hrs 45 mins   ███░░░░░░░░░░░░░░░░░░   14.6%
+Bash         45 mins         █░░░░░░░░░░░░░░░░░░░░    2.9%
+Other        30 mins         ░░░░░░░░░░░░░░░░░░░░░    1.9%
+```
+<!--END_SECTION:waka-->
+
+---
+
+<div align="center">
+  
+### 💡 "Code is like humor. When you have to explain it, it's bad." – Cory House
+
+</div>
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=170&section=footer&text=Thanks%20for%20visiting!&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=72" />
+</p>
+
+<div align="center">
+  
+  ![Snake animation](https://github.com/fixerhack/fixerhack/blob/output/github-contribution-grid-snake.svg)
+  
+</div>
+
+---
+
+<p align="center">
+  <i>⭐️ From <a href="https://github.com/fixerhack">FixerHack</a> with ❤️</i>
+</p>
