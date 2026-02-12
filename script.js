@@ -31,39 +31,39 @@ const translations = {
       coreTitle: 'Ключові якості',
       coreStrengths: {
         ideator: {
-          title: 'Ідейний',
-          desc: 'Генератор інноваційних рішень та нестандартних підходів'
+          title: 'Придумую рішення',
+          desc: 'Люблю знаходити нестандартні способи вирішення проблем'
         },
         networker: {
-          title: 'Мережевик',
-          desc: 'Майстер комунікації та домовленостей'
+          title: 'Легко спілкуюсь',
+          desc: 'Можу домовитись з людьми та пояснити складні речі простими словами'
         },
         analyst: {
-          title: 'Аналітик',
-          desc: 'Багатофакторний аналіз проектів'
+          title: 'Аналізую ситуацію',
+          desc: 'Дивлюсь на проблему з різних сторін перед тим, як приймати рішення'
         }
       },
-      greenFlagsTitle: 'Що мені підходить',
+      greenFlagsTitle: 'Мені підходить робота, де:',
       greenFlags: [
-        'Висока динаміка роботи - швидка реакція на інциденти та зміни',
-        'Багато комунікації - презентації, переговори, продаж ідей',
-        'Поєднання аналізу та дії - не просто звіт, а впровадження',
-        'Елемент соціальної інженерії або впливу',
-        'Чіткий видимий результат - завершені проекти'
+        'Швидкий темп - треба реагувати та приймати рішення на ходу',
+        'Багато спілкування - презентації, обговорення, переговори',
+        'Бачу результат - не просто аналіз, а реальне втілення ідей',
+        'Можу впливати на людей та переконувати їх',
+        'Проекти мають чітке завершення, а не тягнуться роками'
       ],
-      bestMatchTitle: 'Топ-3 ролі для мене',
+      bestMatchTitle: 'Які позиції мені найбільше пасують',
       bestMatch: [
         {
-          title: 'Cybersecurity Consultant',
-          desc: 'Комунікація + ІТ + переконання. Pre-sales та консалтинг.'
+          title: 'Консультант з кібербезпеки',
+          desc: 'Спілкування з клієнтами + технічні знання + вміння переконувати. Допомагаю компаніям захистити їхні системи.'
         },
         {
-          title: 'Incident Response Manager',
-          desc: 'Швидка адаптація + структура + лідерство в кризах.'
+          title: 'Менеджер реагування на інциденти',
+          desc: 'Швидко реагую на проблеми безпеки, організовую команду та веду розслідування. Робота в стресових ситуаціях.'
         },
         {
-          title: 'IT Business Analyst',
-          desc: 'Аналітика + мережування + презентація бізнес-рішень.'
+          title: 'ІТ бізнес-аналітик',
+          desc: 'З\'єдную технічну частину з бізнесом. Аналізую потреби, шукаю рішення та презентую їх керівництву.'
         }
       ]
     }
@@ -99,39 +99,39 @@ const translations = {
       coreTitle: 'Core Qualities',
       coreStrengths: {
         ideator: {
-          title: 'Ideator',
-          desc: 'Generator of innovative solutions and non-standard approaches'
+          title: 'Problem Solver',
+          desc: 'I love finding creative solutions to challenges'
         },
         networker: {
-          title: 'Networker',
-          desc: 'Master of communication and negotiations'
+          title: 'Communicator',
+          desc: 'I can negotiate with people and explain complex things simply'
         },
         analyst: {
-          title: 'Analyst',
-          desc: 'Multi-factor project analysis'
+          title: 'Strategic Thinker',
+          desc: 'I look at problems from different angles before deciding'
         }
       },
-      greenFlagsTitle: 'What suits me',
+      greenFlagsTitle: 'I thrive in work that:',
       greenFlags: [
-        'High work dynamics - fast response to incidents and changes',
-        'Lots of communication - presentations, negotiations, selling ideas',
-        'Combination of analysis and action - not just reports, but implementation',
-        'Element of social engineering or influence',
-        'Clear visible results - completed projects'
+        'Fast-paced - requires quick reactions and on-the-fly decisions',
+        'Communication-heavy - presentations, discussions, negotiations',
+        'Shows results - not just analysis, but real implementation',
+        'Involves influencing and persuading people',
+        'Has clear project completion, not endless maintenance'
       ],
-      bestMatchTitle: 'Top 3 roles for me',
+      bestMatchTitle: 'Best roles for me',
       bestMatch: [
         {
           title: 'Cybersecurity Consultant',
-          desc: 'Communication + IT + persuasion. Pre-sales and consulting.'
+          desc: 'Client communication + technical knowledge + persuasion. Helping companies protect their systems.'
         },
         {
           title: 'Incident Response Manager',
-          desc: 'Fast adaptation + structure + crisis leadership.'
+          desc: 'Quick response to security issues, team coordination, investigations. High-pressure environment work.'
         },
         {
           title: 'IT Business Analyst',
-          desc: 'Analytics + networking + presenting business solutions.'
+          desc: 'Bridge between tech and business. Analyze needs, find solutions, present them to leadership.'
         }
       ]
     }
