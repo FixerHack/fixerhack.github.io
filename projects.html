@@ -5,12 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Проекти - FixerHack</title>
   <meta name="description" content="Портфоліо проектів FixerHack - телеграм-боти, веб-додатки, автоматизація">
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      border-color: rgba(255, 215, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .project-card.kitty {
+      border-color: rgba(168, 85, 247, 0.3);
+      background: linear-gradient(135deg, rgba(168,85,247,0.06), rgba(236,72,153,0.04));
+    }
+    .project-card.kitty:hover {
+      border-color: rgba(236, 72, 153, 0.5);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .project-icon {
+      color: #ffd700;
+      flex-shrink: 0;
+    }
+    .project-card.kitty .project-icon {
+      color: #ec4899;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .project-badge {
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      color: #fff;
+      letter-spacing: 0.05em;
+      margin-left: auto;
+    }
+
+    .project-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      margin: 0 0 12px;
+      line-height: 1.5;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .project-link:hover {
+      color: #ffd700;
+      border-color: rgba(255,215,0,0.3);
+    }
+    .project-card.kitty .project-link:hover {
+      color: #ec4899;
+      border-color: rgba(236,72,153,0.4);
+    }
+
+    .kitty-ai-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
+      background-size: 200% 200%;
+      animation: kittyShift 4s ease infinite;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+    .kitty-ai-btn:hover {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
+      transform: scale(1.05);
+    }
+    @keyframes kittyShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 <body data-page="projects">
   <div class="bg-grid"></div>
@@ -24,7 +162,7 @@
         <a href="index.html" class="nav-link">Головна</a>
         <a href="projects.html" class="nav-link active">Проекти</a>
         <a href="strengths.html" class="nav-link">Сильні сторони</a>
-        <a href="stark.html">Stark Edition</a>
+        <a href="stark.html" class="kitty-ai-btn">🐱 Kitty AI</a>
       </div>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="uk">UA</button>
@@ -46,47 +184,154 @@
       </div>
     </div>
 
-    <!-- Coming Soon Section -->
-    <div class="coming-soon">
-      <i data-lucide="construction" class="coming-soon-icon" width="80" height="80"></i>
-      <h2 class="coming-soon-title">Скоро тут буде портфоліо</h2>
-      <p class="coming-soon-text">
-        Наразі готую детальний опис проектів.<br>
-        Перегляньте мій GitHub для поточних розробок.
-      </p>
-      <div style="margin-top: 32px;">
-        <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-github">
-          <i data-lucide="github" width="20" height="20"></i>
-          Переглянути GitHub
-        </a>
-      </div>
-    </div>
-
-    <!-- Projects Grid (template for future use) -->
-    <!-- 
+    <!-- Projects Grid -->
     <div class="projects-grid">
-      <div class="project-card">
+
+      <!-- Kitty Stark Edition -->
+      <div class="project-card kitty">
         <div class="project-header">
-          <i data-lucide="bot" class="project-icon" width="32" height="32"></i>
-          <h3 class="project-title">TG-Manager</h3>
+          <i data-lucide="cpu" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">◈ KITTY — Stark Edition</h3>
+          <span class="project-badge">NEW</span>
         </div>
         <p class="project-desc">
-          Comprehensive Telegram bot management system with web interface and modular architecture.
+          AI-агент для Windows з хакер-стилем UI, голосовим TTS з robot-ефектами та агентичним циклом. Підтримує плагіни та інтеграцію через OpenRouter API.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Electron</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">OpenRouter</span>
+          <span class="project-tag">TTS</span>
+          <span class="project-tag">Plugins</span>
+        </div>
+        <div class="project-links">
+          <a href="stark.html" class="project-link">
+            <i data-lucide="sparkles" width="14" height="14"></i>
+            Stark Edition
+          </a>
+        </div>
+      </div>
+
+      <!-- TG-botFarm -->
+      <div class="project-card">
+        <div class="project-header">
+          <i data-lucide="shopping-bag" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">TG-botFarm</h3>
+        </div>
+        <p class="project-desc">
+          Повнофункціональний асинхронний Telegram-магазин цифрових товарів. Автовидача після оплати, CryptoBot (USDT/BTC/TON), промокоди, реферальна система та FSM адмін-панель.
         </p>
         <div class="project-tags">
           <span class="project-tag">Python</span>
-          <span class="project-tag">aiogram</span>
-          <span class="project-tag">Flask</span>
+          <span class="project-tag">aiogram 3</span>
+          <span class="project-tag">SQLite</span>
+          <span class="project-tag">CryptoBot</span>
+          <span class="project-tag">asyncio</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">
-            <i data-lucide="github" width="16" height="16"></i>
+          <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i data-lucide="github" width="14" height="14"></i>
             GitHub
           </a>
         </div>
       </div>
+
+      <!-- Lester Bot -->
+      <div class="project-card">
+        <div class="project-header">
+          <i data-lucide="shield" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">Lester Bot</h3>
+        </div>
+        <p class="project-desc">
+          Discord-бот модерації з веб-панеллю (FastAPI), SaaS ліцензуванням, мультимовністю (UK/RU/EN), авто-модерацією, GTA-верифікацією та системою тікетів.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">discord.py</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">SQLite</span>
+          <span class="project-tag">Jinja2</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i data-lucide="github" width="14" height="14"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- TG-Manager -->
+      <div class="project-card">
+        <div class="project-header">
+          <i data-lucide="layout-dashboard" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">TG-Manager</h3>
+        </div>
+        <p class="project-desc">
+          Повна система керування Telegram ботами: FastAPI backend, React frontend з темною темою, JWT автентифікація та aiogram-бот з модульною архітектурою (23 файли).
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">aiogram</span>
+          <span class="project-tag">JWT</span>
+          <span class="project-tag">Pyrogram</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i data-lucide="github" width="14" height="14"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Telegram Anti-Phishing -->
+      <div class="project-card">
+        <div class="project-header">
+          <i data-lucide="shield-alert" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">Telegram Anti-Phishing Guard</h3>
+        </div>
+        <p class="project-desc">
+          Chrome-розширення (Manifest V3) для виявлення фішингових сторінок, що імітують Telegram. Аналіз URL, ключових слів та форм вводу з повноекранним попередженням.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Chrome Extension</span>
+          <span class="project-tag">Manifest V3</span>
+          <span class="project-tag">Security</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i data-lucide="github" width="14" height="14"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Rada Bills Analyzer -->
+      <div class="project-card">
+        <div class="project-header">
+          <i data-lucide="landmark" class="project-icon" width="28" height="28"></i>
+          <h3 class="project-title">Система аналізу законопроєктів</h3>
+        </div>
+        <p class="project-desc">
+          Автоматизований скрейпер rada.gov.ua з AI-аналізом через Google Gemini. Виявляє корупційні ризики, конвертує PDF/DOCX у Markdown, зберігає у Firestore. Telegram бот + REST API.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">Gemini AI</span>
+          <span class="project-tag">Firestore</span>
+          <span class="project-tag">Google Cloud</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/fixerhack" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i data-lucide="github" width="14" height="14"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
     </div>
-    -->
   </div>
 
   <!-- Scripts -->
