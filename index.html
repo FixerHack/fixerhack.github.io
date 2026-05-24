@@ -5,12 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FixerHack - Freelance Developer</title>
   <meta name="description" content="Створюю телеграм-боти, веб-додатки та автоматизацію. Спеціалізуюся на безпеці, інтеграціях та нестандартних рішеннях.">
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .kitty-ai-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
+      background-size: 200% 200%;
+      animation: kittyShift 4s ease infinite;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+    .kitty-ai-btn:hover {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
+      transform: scale(1.05);
+    }
+    @keyframes kittyShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 <body data-page="home">
   <div class="bg-grid"></div>
@@ -24,7 +53,9 @@
         <a href="index.html" class="nav-link active">Головна</a>
         <a href="projects.html" class="nav-link">Проекти</a>
         <a href="strengths.html" class="nav-link">Сильні сторони</a>
-        <a href="stark.html">Stark Edition</a>
+        <a href="stark.html" class="kitty-ai-btn">
+          🐱 Kitty AI
+        </a>
       </div>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="uk">UA</button>
