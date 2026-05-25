@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аналіз Законопроєктів — FixerHack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { min-height: 100vh; background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%); font-family: 'JetBrains Mono', 'Fira Code', monospace; color: #e0e6ed; padding: 20px; position: relative; overflow-x: hidden; }
+    .bg-grid { position: fixed; inset: 0; background-image: linear-gradient(rgba(58,134,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(58,134,255,0.03) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 0; }
+    .glow-orb-1 { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,215,0,0.07) 0%, transparent 70%); top: 10%; left: 5%; border-radius: 50%; filter: blur(80px); pointer-events: none; animation: float 20s infinite ease-in-out; z-index: 0; }
+    .glow-orb-2 { position: fixed; width: 500px; height: 500px; background: radial-gradient(circle, rgba(58,134,255,0.1) 0%, transparent 70%); bottom: 10%; right: 10%; border-radius: 50%; filter: blur(80px); pointer-events: none; animation: float 25s infinite ease-in-out reverse; z-index: 0; }
+    @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(30px,-30px) scale(1.1); } 66% { transform: translate(-20px,20px) scale(0.9); } }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+    @keyframes slideIn { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes borderFlow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes scan { 0% { transform: translateY(-100%); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(800%); opacity: 0; } }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .card { position: relative; max-width: 1080px; margin: 0 auto; background: rgba(15,20,35,0.85); backdrop-filter: blur(20px); border-radius: 24px; padding: 56px 60px; box-shadow: 0 0 0 1px rgba(58,134,255,0.2), 0 20px 60px rgba(0,0,0,0.5), 0 0 80px rgba(58,134,255,0.05); border: 1px solid rgba(58,134,255,0.2); animation: slideIn 0.8s ease-out; z-index: 1; }
+    .card::before { content:''; position:absolute; inset:-2px; background: linear-gradient(90deg, transparent, rgba(255,215,0,0.35), rgba(58,134,255,0.35), transparent); background-size: 200% 100%; border-radius:24px; opacity:0; transition:opacity 0.4s; animation: borderFlow 3s linear infinite; pointer-events:none; z-index:-1; filter:blur(4px); }
+    .card:hover::before { opacity:1; }
+
+    .nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:48px; padding-bottom:24px; border-bottom:1px solid rgba(58,134,255,0.2); }
+    .nav-links { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+    .nav-link { color:#8b9dc3; text-decoration:none; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; transition:all 0.3s; position:relative; padding:8px 0; }
+    .nav-link:hover { color:#ffd700; }
+    .nav-link.active { color:#ffd700; }
+    .nav-link.active::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#ffd700,#3a86ff); border-radius:2px; }
+    .kitty-btn { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:0.03em; text-decoration:none; color:#fff; background: linear-gradient(135deg,#a855f7,#ec4899,#f97316); background-size:200% 200%; animation: borderFlow 4s ease infinite; box-shadow:0 0 12px rgba(168,85,247,0.5); transition:box-shadow 0.3s, transform 0.2s; }
+    .kitty-btn:hover { box-shadow:0 0 20px rgba(236,72,153,0.7); transform:scale(1.05); }
+
+    .hero { margin-bottom:48px; }
+    .hero-top { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+    .hero-icon { color:#ffd700; animation:pulse 2s infinite; }
+    .hero-title { font-size:40px; font-weight:800; background:linear-gradient(135deg,#ffd700 0%,#3a86ff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:-0.02em; }
+    .hero-sub { font-size:16px; color:#8b9dc3; font-weight:500; letter-spacing:0.05em; margin-bottom:16px; }
+    .hero-desc { font-size:15px; color:#b8c5db; line-height:1.75; max-width:720px; }
+    .status-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 18px; border-radius:20px; font-size:13px; font-weight:600; }
+    .badge-active { background:rgba(0,255,127,0.1); border:1px solid rgba(0,255,127,0.35); color:#00ff7f; }
+    .badge-phase  { background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.35); color:#ffd700; }
+    .badge-dot { width:7px; height:7px; border-radius:50%; animation:pulse 2s infinite; }
+    .badge-active .badge-dot { background:#00ff7f; }
+    .badge-phase .badge-dot  { background:#ffd700; }
+
+    .section-title { font-size:13px; text-transform:uppercase; letter-spacing:0.12em; color:#8b9dc3; margin-bottom:20px; font-weight:700; display:flex; align-items:center; gap:8px; }
+    .section-title svg { color:#ffd700; }
+
+    .hud-box { position:relative; overflow:hidden; padding:28px; border-radius:16px; border:1.5px solid rgba(58,134,255,0.3); background:rgba(10,14,39,0.6); margin-bottom:48px; }
+    .hud-box::after { content:''; position:absolute; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,rgba(58,134,255,0.6),transparent); animation: scan 4s linear infinite; pointer-events:none; }
+    .hud-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#3a86ff; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+    .cursor { animation:blink 1s infinite; color:#00ff7f; }
+    .hud-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px; }
+    .hud-stat-label { font-size:11px; color:#8b9dc3; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px; }
+    .hud-stat-val { font-size:20px; font-weight:700; color:#ffd700; }
+    .hud-stat-val span { font-size:13px; color:#8b9dc3; font-weight:400; }
+
+    /* PIPELINE */
+    .pipeline-section { margin-bottom:48px; }
+    .pipeline { display:flex; flex-direction:column; gap:0; position:relative; }
+    .pipeline::before { content:''; position:absolute; left:22px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,#ffd700,#3a86ff,rgba(58,134,255,0)); border-radius:2px; }
+    .pipeline-step { display:flex; gap:20px; position:relative; padding:0 0 32px 0; animation: slideIn 0.6s ease-out backwards; }
+    .pipeline-step:last-child { padding-bottom:0; }
+    .pipeline-step:nth-child(1){animation-delay:0.05s} .pipeline-step:nth-child(2){animation-delay:0.1s} .pipeline-step:nth-child(3){animation-delay:0.15s} .pipeline-step:nth-child(4){animation-delay:0.2s}
+    .step-num { width:46px; height:46px; border-radius:50%; background:rgba(255,215,0,0.12); border:2px solid rgba(255,215,0,0.5); color:#ffd700; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; flex-shrink:0; position:relative; z-index:1; }
+    .step-body { flex:1; padding:16px 20px; border-radius:14px; border:1.5px solid rgba(58,134,255,0.15); background:rgba(58,134,255,0.04); transition:all 0.3s; }
+    .step-body:hover { border-color:rgba(255,215,0,0.3); transform:translateX(4px); }
+    .step-title { font-size:16px; font-weight:700; color:#ffd700; margin-bottom:6px; }
+    .step-desc { font-size:13px; color:#b8c5db; line-height:1.6; }
+
+    /* BOT COMMANDS */
+    .commands-section { margin-bottom:48px; }
+    .commands-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+    .command-item { padding:14px 18px; border-radius:12px; border:1px solid rgba(58,134,255,0.15); background:rgba(58,134,255,0.04); transition:all 0.2s; }
+    .command-item:hover { border-color:rgba(255,215,0,0.25); }
+    .command-name { color:#00ff7f; font-weight:700; font-size:14px; margin-bottom:5px; }
+    .command-desc { color:#8b9dc3; font-size:12px; line-height:1.5; }
+
+    .stack-section { margin-bottom:48px; }
+    .stack-grid { display:flex; flex-wrap:wrap; gap:10px; }
+    .stack-tag { padding:9px 18px; background:rgba(58,134,255,0.08); border:1px solid rgba(58,134,255,0.25); border-radius:8px; font-size:13px; font-weight:600; color:#b8c5db; transition:all 0.3s; cursor:default; }
+    .stack-tag:hover { background:rgba(58,134,255,0.18); border-color:rgba(255,215,0,0.4); color:#ffd700; transform:translateY(-2px); }
+
+    .back-link { display:inline-flex; align-items:center; gap:10px; padding:14px 28px; border-radius:12px; background:rgba(255,215,0,0.08); border:1.5px solid rgba(255,215,0,0.3); color:#ffd700; text-decoration:none; font-weight:600; font-size:15px; transition:all 0.3s; }
+    .back-link:hover { background:rgba(255,215,0,0.18); transform:translateY(-3px); box-shadow:0 10px 30px rgba(255,215,0,0.2); }
+
+    @media (max-width:768px) { .card { padding:32px 20px; } .nav { flex-direction:column; gap:14px; align-items:flex-start; } .hero-title { font-size:26px; } }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+
+  <div class="card">
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Профіль</a>
+        <a href="strengths.html" class="nav-link">Про мене</a>
+        <a href="projects.html" class="nav-link active">Проекти</a>
+        <a href="stark.html" class="kitty-btn">🐱 Kitty AI</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-top">
+        <svg class="hero-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        <h1 class="hero-title">Аналіз Законопроєктів</h1>
+      </div>
+      <p class="hero-sub">// Верховна Рада · AI · Google Gemini · Cloud Run</p>
+      <p class="hero-desc">
+        Автоматизована система для завантаження, обробки та AI-аналізу законопроєктів з сайту Верховної Ради України.
+        Виявляє корупційні ризики, конвертує PDF/DOCX у Markdown, зберігає у Firestore. Telegram бот + REST API.
+      </p>
+      <div class="status-row">
+        <span class="badge badge-active"><span class="badge-dot"></span>Завершено</span>
+        <span class="badge badge-phase"><span class="badge-dot"></span>Python · Gemini AI · Google Cloud</span>
+      </div>
+    </section>
+
+    <div class="hud-box">
+      <div class="hud-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        RADA_ANALYZER :: СТАТУС
+        <span class="cursor">█</span>
+      </div>
+      <div class="hud-grid">
+        <div class="hud-stat"><div class="hud-stat-label">AI Модель</div><div class="hud-stat-val">Gemini <span>Google</span></div></div>
+        <div class="hud-stat"><div class="hud-stat-label">Backend</div><div class="hud-stat-val">FastAPI <span>+ asyncio</span></div></div>
+        <div class="hud-stat"><div class="hud-stat-label">Зберігання</div><div class="hud-stat-val">Firestore <span>+ GCS</span></div></div>
+        <div class="hud-stat"><div class="hud-stat-label">Деплой</div><div class="hud-stat-val">Cloud <span>Run</span></div></div>
+        <div class="hud-stat"><div class="hud-stat-label">Формати</div><div class="hud-stat-val">PDF <span>/ DOCX / MD</span></div></div>
+        <div class="hud-stat"><div class="hud-stat-label">Контейнер</div><div class="hud-stat-val">Docker <span>ready</span></div></div>
+      </div>
+    </div>
+
+    <section class="pipeline-section">
+      <p class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Автоматичний пайплайн
+      </p>
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">📥 Завантаження HTML-картки</div>
+            <p class="step-desc">Скрейпінг сторінки законопроєкту з rada.gov.ua. Підтримка діапазонів сторінок та лічильника.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">📄 Завантаження документів</div>
+            <p class="step-desc">Автоматичне завантаження прикріплених PDF та DOCX файлів із картки законопроєкту.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">🔄 Конвертація у Markdown</div>
+            <p class="step-desc">PDF → Markdown через pdfplumber/pdfminer. DOCX → Markdown через pypandoc. Структурований текст для AI.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">🤖 AI-аналіз через Gemini</div>
+            <p class="step-desc">Аналіз змісту, виявлення корупційних ризиків, структурований звіт. Затримка 2 секунди між запитами (ліміти API).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="commands-section">
+      <p class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        Telegram бот — команди
+      </p>
+      <div class="commands-grid">
+        <div class="command-item">
+          <div class="command-name">/start</div>
+          <div class="command-desc">Привітання та інструкції по використанню</div>
+        </div>
+        <div class="command-item">
+          <div class="command-name">/bill &lt;номер&gt;</div>
+          <div class="command-desc">Повний аналіз законопроєкту: завантаження → конвертація → AI</div>
+        </div>
+        <div class="command-item">
+          <div class="command-name">/search &lt;запит&gt;</div>
+          <div class="command-desc">Пошук законопроєктів по темі або ключовому слову</div>
+        </div>
+        <div class="command-item">
+          <div class="command-name">/status</div>
+          <div class="command-desc">Статус системи та доступність всіх сервісів</div>
+        </div>
+        <div class="command-item">
+          <div class="command-name">/help</div>
+          <div class="command-desc">Детальна допомога по всіх командах</div>
+        </div>
+        <div class="command-item">
+          <div class="command-name">12414</div>
+          <div class="command-desc">Просто номер — бот автоматично запускає /bill 12414</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack-section">
+      <p class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Стек
+      </p>
+      <div class="stack-grid">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">Google Gemini</span>
+        <span class="stack-tag">Firestore</span>
+        <span class="stack-tag">Google Cloud Storage</span>
+        <span class="stack-tag">Cloud Run</span>
+        <span class="stack-tag">Docker</span>
+        <span class="stack-tag">pdfplumber</span>
+        <span class="stack-tag">pypandoc</span>
+        <span class="stack-tag">aiogram</span>
+        <span class="stack-tag">requests</span>
+      </div>
+    </section>
+
+    <a href="projects.html" class="back-link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      Назад до проектів
+    </a>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
