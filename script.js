@@ -7,8 +7,8 @@ const translations = {
       strengths: 'Сильні сторони'
     },
     home: {
-      subtitle: 'Freelance Developer & Tech Innovator',
-      description: 'Створюю телеграм-боти, веб-додатки та автоматизацію. Спеціалізуюся на безпеці, інтеграціях та нестандартних рішеннях.',
+      subtitle: 'Security-minded Developer & Automation Engineer',
+      description: 'Будую Telegram-боти, веб-сервіси та інструменти кібербезпеки: анти-фішинг, моніторинг загроз (OSINT), шифрування сесій і аналіз систем. Python, Swift, FastAPI.',
       techStack: 'Tech Stack',
       contacts: 'Контакти',
       status: 'Доступний для проектів'
@@ -75,8 +75,8 @@ const translations = {
       strengths: 'Strengths'
     },
     home: {
-      subtitle: 'Freelance Developer & Tech Innovator',
-      description: 'Building Telegram bots, web apps, and automation. Specialized in security, integrations, and non-standard solutions.',
+      subtitle: 'Security-minded Developer & Automation Engineer',
+      description: 'Building Telegram bots, web services, and cybersecurity tooling: anti-phishing, OSINT threat monitoring, session encryption, and system analysis. Python, Swift, FastAPI.',
       techStack: 'Tech Stack',
       contacts: 'Contacts',
       status: 'Available for projects'
@@ -188,7 +188,7 @@ function updateHomePage(t) {
 
   if (subtitle) subtitle.innerHTML = `<i data-lucide="code-2" width="18" height="18"></i>${t.subtitle}`;
   if (description) description.textContent = t.description;
-  if (techStackTitle) techStackTitle.innerHTML = `<i data-lucide="zap" width="16" height="16" style="color: #ffd700;"></i>${t.techStack}`;
+  if (techStackTitle) techStackTitle.innerHTML = `<i data-lucide="zap" width="16" height="16" style="color: #00ff9c;"></i>${t.techStack}`;
   if (contactsTitle) contactsTitle.textContent = t.contacts;
   if (status) status.innerHTML = `<div class="status-dot"></div>${t.status}`;
 
@@ -234,7 +234,7 @@ function updateStrengthsPage(t) {
 
   // Core strengths title
   const coreTitle = document.querySelector('.section-title');
-  if (coreTitle) coreTitle.innerHTML = `<i data-lucide="star" width="16" height="16" style="color: #ffd700;"></i>${t.coreTitle}`;
+  if (coreTitle) coreTitle.innerHTML = `<i data-lucide="star" width="16" height="16" style="color: #00ff9c;"></i>${t.coreTitle}`;
 
   // Core strengths cards
   const strengthCards = document.querySelectorAll('.strength-card');
@@ -260,7 +260,7 @@ function updateStrengthsPage(t) {
 
   // Best match roles
   const rolesTitle = document.querySelector('.roles-section .section-title');
-  if (rolesTitle) rolesTitle.innerHTML = `<i data-lucide="target" width="16" height="16" style="color: #ffd700;"></i>${t.bestMatchTitle}`;
+  if (rolesTitle) rolesTitle.innerHTML = `<i data-lucide="target" width="16" height="16" style="color: #00ff9c;"></i>${t.bestMatchTitle}`;
 
   const roleCards = document.querySelectorAll('.role-card');
   roleCards.forEach((card, i) => {
