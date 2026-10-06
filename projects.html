@@ -7,68 +7,6 @@
   <meta name="description" content="Портфоліо FixerHack — інструменти кібербезпеки, Telegram-боти, веб-сервіси та автоматизація.">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 8px;
-    }
-    .project-card {
-      display: block;
-      text-decoration: none;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 20px;
-      transition: border-color 0.2s, transform 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    .project-card:hover {
-      border-color: rgba(0, 255, 156, 0.35);
-      background: rgba(0,255,156,0.03);
-      transform: translateY(-2px);
-    }
-    .project-card:hover .project-arrow { opacity: 1; transform: translateX(4px); }
-
-    .project-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .project-icon { color: #00ff9c; flex-shrink: 0; }
-    .project-title { font-size: 1rem; font-weight: 700; color: #fff; margin: 0; }
-    .project-arrow {
-      color: rgba(0,255,156,0.6);
-      opacity: 0;
-      transition: opacity 0.2s, transform 0.2s;
-      flex-shrink: 0;
-      margin-left: 6px;
-    }
-    .project-desc {
-      font-size: 0.82rem;
-      color: rgba(199,214,204,0.7);
-      margin: 0 0 12px;
-      line-height: 1.5;
-    }
-    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .project-tag {
-      font-size: 0.7rem; padding: 3px 10px; border-radius: 999px;
-      background: rgba(255,255,255,0.06); color: rgba(199,214,204,0.65);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .kitty-ai-btn {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 14px; border-radius: 999px; font-size: 0.85rem;
-      font-weight: 600; letter-spacing: 0.03em; text-decoration: none; color: #fff;
-      background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
-      background-size: 200% 200%; animation: kittyShift 4s ease infinite;
-      box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
-      transition: box-shadow 0.3s ease, transform 0.2s ease;
-    }
-    .kitty-ai-btn:hover { box-shadow: 0 0 20px rgba(236,72,153,0.7); transform: scale(1.05); }
-    @keyframes kittyShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-  </style>
 </head>
 <body data-page="projects">
   <div class="bg-grid"></div>
@@ -76,217 +14,205 @@
   <div class="glow-orb-2"></div>
   <div class="scanlines"></div>
 
-  <div class="card">
-    <nav class="nav">
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Головна</a>
-        <a href="projects.html" class="nav-link active">Проекти</a>
-        <a href="strengths.html" class="nav-link">Сильні сторони</a>
-        <a href="stark.html" class="kitty-ai-btn">🐱 Kitty AI</a>
-      </div>
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/<span class="u">projects</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+      <a href="strengths.html" class="nav-link">strengths</a>
+      <a href="stark.html" class="nav-link">kitty</a>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="uk">UA</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </nav>
+  </header>
 
+  <main class="card">
     <div class="header">
-      <div class="header-top">
-        <i data-lucide="folder-git-2" class="icon-terminal" width="48" height="48"></i>
-        <div>
-          <h1 class="name">Проекти</h1>
-          <p class="subtitle">
-            <i data-lucide="code-2" width="18" height="18"></i>
-            Інструменти безпеки, боти та сервіси
-          </p>
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/projects</span>
+          <span class="term-badge">scan complete</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~/projects$</span><span class="ret">ls --sort=impact</span></p>
+          <p class="tline out"><span class="i18n-subtitle">Інструменти безпеки, боти та сервіси</span> — <span style="color:var(--acc)">10</span> записів <span class="cursor"></span></p>
         </div>
       </div>
-      <p class="term-line">
-        <span class="prompt">fixerhack@sec</span><span class="path">:~/projects$</span>
-        <span class="cmd">ls --sort=impact</span>
-        <span class="cursor"></span>
-      </p>
     </div>
 
-    <div class="projects-grid">
+    <div class="module">
+      <h2 class="section-title">
+        <i data-lucide="folder-git-2" width="15" height="15"></i>
+        Портфоліо
+        <span class="count">[ oss + private ]</span>
+      </h2>
 
-      <a href="https://github.com/FixerHack/MacUtil" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-header">
-          <i data-lucide="shield-check" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">MacUtil</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="external-link" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Безкоштовний cleaner, оптимізатор і аналізатор безпеки для macOS у дусі CleanMyMac, OnyX та інструментів Objective-See. Нативний Swift/SwiftUI, без телеметрії та підписок, з Homebrew-встановленням.</p>
-        <div class="project-tags">
-          <span class="project-tag">Swift</span>
-          <span class="project-tag">SwiftUI</span>
-          <span class="project-tag">macOS Security</span>
-          <span class="project-tag">Homebrew</span>
-          <span class="project-tag">GPL-3.0</span>
-        </div>
-      </a>
+      <div class="projects-grid">
 
-      <a href="anti-phishing.html" class="project-card">
-        <div class="project-header">
-          <i data-lucide="shield-alert" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">Telegram Anti-Phishing Guard</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="arrow-right" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Chrome-розширення (Manifest V3), що виявляє фішингові сторінки, які імітують Telegram. Аналіз hostname на тайпсквотинг, пошук ключових слів і полів вводу з повноекранним попередженням.</p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Chrome Extension</span>
-          <span class="project-tag">Manifest V3</span>
-          <span class="project-tag">Anti-Phishing</span>
-        </div>
-      </a>
+        <a href="https://github.com/FixerHack/MacUtil" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-header">
+            <i data-lucide="shield-check" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">MacUtil</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="external-link" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Безкоштовний cleaner, оптимізатор і аналізатор безпеки для macOS у дусі CleanMyMac, OnyX та інструментів Objective-See. Нативний Swift/SwiftUI, без телеметрії та підписок, з Homebrew-встановленням.</p>
+          <div class="project-tags">
+            <span class="project-tag">Swift</span><span class="project-tag">SwiftUI</span>
+            <span class="project-tag">macOS Security</span><span class="project-tag">Homebrew</span><span class="project-tag">GPL-3.0</span>
+          </div>
+        </a>
 
-      <a href="https://github.com/FixerHack/war-predictor" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-header">
-          <i data-lucide="radar" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">Tension Index</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="external-link" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">OSINT-моніторинг сигналів ескалації для 38 країн Європи за шкалою 0–10. Щодня збирає офіційні travel advisories, порівнює версії, класифікує зміни через LLM і повідомляє, скільки незалежних джерел це підтверджують. Telegram-бот + публічна карта.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">aiogram 3</span>
-          <span class="project-tag">OSINT</span>
-          <span class="project-tag">SQLite</span>
-          <span class="project-tag">LLM</span>
-        </div>
-      </a>
+        <a href="anti-phishing.html" class="project-card">
+          <div class="project-header">
+            <i data-lucide="shield-alert" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">Telegram Anti-Phishing Guard</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="arrow-right" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Chrome-розширення (Manifest V3), що виявляє фішингові сторінки, які імітують Telegram. Аналіз hostname на тайпсквотинг, пошук ключових слів і полів вводу з повноекранним попередженням.</p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span><span class="project-tag">Chrome Extension</span>
+            <span class="project-tag">Manifest V3</span><span class="project-tag">Anti-Phishing</span>
+          </div>
+        </a>
 
-      <a href="https://github.com/FixerHack/usertgbot" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-header">
-          <i data-lucide="users" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">UserTGBot Platform</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="external-link" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Платформа Telegram-userbot із незалежно розгортуваних сервісів на спільній Postgres-схемі. Тарифи й оплати (Telegram Stars, Crypto Pay), прив'язка акаунтів через інлайн-пад, Fernet-шифрування сесій, адмін-панель і фід змінених/видалених повідомлень.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Telethon</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">Fernet Encryption</span>
-          <span class="project-tag">Docker</span>
-        </div>
-      </a>
+        <a href="https://github.com/FixerHack/war-predictor" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-header">
+            <i data-lucide="radar" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">Tension Index</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="external-link" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">OSINT-моніторинг сигналів ескалації для 38 країн Європи за шкалою 0–10. Щодня збирає офіційні travel advisories, порівнює версії, класифікує зміни через LLM і показує, скільки незалежних джерел це підтверджують. Telegram-бот + публічна карта.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">aiogram 3</span>
+            <span class="project-tag">OSINT</span><span class="project-tag">SQLite</span><span class="project-tag">LLM</span>
+          </div>
+        </a>
 
-      <a href="https://github.com/FixerHack/claude-gateway" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-header">
-          <i data-lucide="server" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">claude-gateway</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="external-link" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Перетворює Claude Code на сервері на сервіс для будь-яких програм: власний HTTP API, OpenAI- та Anthropic-сумісні ендпоінти і MCP-сервер. Кожен запит ізольований — без інструментів, без сесії, у тимчасовій теці. Токен-авторизація, systemd-розгортання.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">API Gateway</span>
-          <span class="project-tag">MCP</span>
-          <span class="project-tag">systemd</span>
-        </div>
-      </a>
+        <a href="https://github.com/FixerHack/usertgbot" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-header">
+            <i data-lucide="users" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">UserTGBot Platform</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="external-link" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Платформа Telegram-userbot із незалежно розгортуваних сервісів на спільній Postgres-схемі. Тарифи й оплати (Telegram Stars, Crypto Pay), прив'язка акаунтів через інлайн-пад, Fernet-шифрування сесій, адмін-панель і фід змінених/видалених повідомлень.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">Telethon</span>
+            <span class="project-tag">FastAPI</span><span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Fernet Encryption</span><span class="project-tag">Docker</span>
+          </div>
+        </a>
 
-      <a href="lester-bot.html" class="project-card">
-        <div class="project-header">
-          <i data-lucide="shield" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">Lester Bot</h3>
-          <span class="project-source priv">Private</span>
-          <i data-lucide="arrow-right" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Discord-бот модерації з веб-панеллю (FastAPI), SaaS-ліцензуванням, мультимовністю (UK/RU/EN), авто-модерацією з 8 модулів, верифікацією та системою тікетів.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">discord.py</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">SQLite</span>
-          <span class="project-tag">Jinja2</span>
-        </div>
-      </a>
+        <a href="https://github.com/FixerHack/claude-gateway" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-header">
+            <i data-lucide="server" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">claude-gateway</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="external-link" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Перетворює Claude Code на сервері на сервіс для будь-яких програм: власний HTTP API, OpenAI- та Anthropic-сумісні ендпоінти і MCP-сервер. Кожен запит ізольований — без інструментів, без сесії, у тимчасовій теці. Токен-авторизація, systemd-розгортання.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">API Gateway</span>
+            <span class="project-tag">MCP</span><span class="project-tag">systemd</span>
+          </div>
+        </a>
 
-      <a href="tg-manager.html" class="project-card">
-        <div class="project-header">
-          <i data-lucide="layout-dashboard" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">TG-Manager</h3>
-          <span class="project-source priv">Private</span>
-          <i data-lucide="arrow-right" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Повна система керування Telegram-ботами: FastAPI backend, React frontend із темною темою, JWT-автентифікація та aiogram-бот із модульною архітектурою.</p>
-        <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">aiogram</span>
-          <span class="project-tag">JWT</span>
-          <span class="project-tag">Pyrogram</span>
-        </div>
-      </a>
+        <a href="lester-bot.html" class="project-card">
+          <div class="project-header">
+            <i data-lucide="shield" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">Lester Bot</h3>
+            <span class="project-source priv">Private</span>
+            <i data-lucide="arrow-right" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Discord-бот модерації з веб-панеллю (FastAPI), SaaS-ліцензуванням, мультимовністю (UK/RU/EN), авто-модерацією з 8 модулів, верифікацією та системою тікетів.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">discord.py</span>
+            <span class="project-tag">FastAPI</span><span class="project-tag">SQLite</span><span class="project-tag">Jinja2</span>
+          </div>
+        </a>
 
-      <a href="rada-analyzer.html" class="project-card">
-        <div class="project-header">
-          <i data-lucide="landmark" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">Система аналізу законопроєктів</h3>
-          <span class="project-source priv">Private</span>
-          <i data-lucide="arrow-right" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Автоматизований скрейпер rada.gov.ua з AI-аналізом через Gemini. Виявляє корупційні ризики, конвертує PDF/DOCX у Markdown, зберігає у Firestore. Telegram-бот + REST API.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">Gemini AI</span>
-          <span class="project-tag">Firestore</span>
-          <span class="project-tag">Google Cloud</span>
-        </div>
-      </a>
+        <a href="tg-manager.html" class="project-card">
+          <div class="project-header">
+            <i data-lucide="layout-dashboard" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">TG-Manager</h3>
+            <span class="project-source priv">Private</span>
+            <i data-lucide="arrow-right" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Повна система керування Telegram-ботами: FastAPI backend, React frontend із темною темою, JWT-автентифікація та aiogram-бот із модульною архітектурою.</p>
+          <div class="project-tags">
+            <span class="project-tag">React</span><span class="project-tag">FastAPI</span>
+            <span class="project-tag">aiogram</span><span class="project-tag">JWT</span><span class="project-tag">Pyrogram</span>
+          </div>
+        </a>
 
-      <a href="tg-botfarm.html" class="project-card">
-        <div class="project-header">
-          <i data-lucide="shopping-bag" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">TG-botFarm</h3>
-          <span class="project-source priv">Private</span>
-          <i data-lucide="arrow-right" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Асинхронний Telegram-магазин цифрових товарів: автовидача після оплати через CryptoBot (USDT/BTC/TON), промокоди, реферальна система та FSM адмін-панель.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">aiogram 3</span>
-          <span class="project-tag">SQLite</span>
-          <span class="project-tag">CryptoBot</span>
-          <span class="project-tag">asyncio</span>
-        </div>
-      </a>
+        <a href="rada-analyzer.html" class="project-card">
+          <div class="project-header">
+            <i data-lucide="landmark" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">Система аналізу законопроєктів</h3>
+            <span class="project-source priv">Private</span>
+            <i data-lucide="arrow-right" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Автоматизований скрейпер rada.gov.ua з AI-аналізом через Gemini. Виявляє корупційні ризики, конвертує PDF/DOCX у Markdown, зберігає у Firestore. Telegram-бот + REST API.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">FastAPI</span>
+            <span class="project-tag">Gemini AI</span><span class="project-tag">Firestore</span><span class="project-tag">Google Cloud</span>
+          </div>
+        </a>
 
-      <a href="https://github.com/FixerHack/makeyourtier" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-header">
-          <i data-lucide="list-ordered" class="project-icon" width="26" height="26"></i>
-          <h3 class="project-title">MakeYourTier</h3>
-          <span class="project-source oss">Open-source</span>
-          <i data-lucide="external-link" class="project-arrow" width="18" height="18"></i>
-        </div>
-        <p class="project-desc">Реалтайм тір-лист мейкер без реклами й реєстрації. Спільна дошка з курсорами учасників, голосування й результати, модерація з передачею прав, бан по IP. Python (aiohttp + WebSocket), фронт на чистому JS.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">aiohttp</span>
-          <span class="project-tag">WebSocket</span>
-          <span class="project-tag">Vanilla JS</span>
-        </div>
-      </a>
+        <a href="tg-botfarm.html" class="project-card">
+          <div class="project-header">
+            <i data-lucide="shopping-bag" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">TG-botFarm</h3>
+            <span class="project-source priv">Private</span>
+            <i data-lucide="arrow-right" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Асинхронний Telegram-магазин цифрових товарів: автовидача після оплати через CryptoBot (USDT/BTC/TON), промокоди, реферальна система та FSM адмін-панель.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">aiogram 3</span>
+            <span class="project-tag">SQLite</span><span class="project-tag">CryptoBot</span><span class="project-tag">asyncio</span>
+          </div>
+        </a>
 
+        <a href="https://github.com/FixerHack/makeyourtier" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-header">
+            <i data-lucide="list-ordered" class="project-icon" width="22" height="22"></i>
+            <h3 class="project-title">MakeYourTier</h3>
+            <span class="project-source oss">Open-source</span>
+            <i data-lucide="external-link" class="project-arrow" width="16" height="16"></i>
+          </div>
+          <p class="project-desc">Реалтайм тір-лист мейкер без реклами й реєстрації. Спільна дошка з курсорами учасників, голосування й результати, модерація з передачею прав, бан по IP. Python (aiohttp + WebSocket), фронт на чистому JS.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">aiohttp</span>
+            <span class="project-tag">WebSocket</span><span class="project-tag">Vanilla JS</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div style="margin-top:22px;">
+        <a href="https://github.com/FixerHack?tab=repositories" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-github">
+          <i data-lucide="github" width="18" height="18"></i> Усі репозиторії на GitHub
+        </a>
+      </div>
     </div>
+  </main>
 
-    <div style="margin-top:28px; text-align:center;">
-      <a href="https://github.com/FixerHack?tab=repositories" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-github" style="display:inline-flex;">
-        <i data-lucide="github" width="20" height="20"></i>
-        Усі репозиторії на GitHub
-      </a>
-    </div>
-  </div>
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> 10 projects indexed</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>

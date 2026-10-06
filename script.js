@@ -1,47 +1,27 @@
-// Language translations
+// ============================================================
+// FixerHack site — i18n + terminal effects
+// Nav labels stay static (english / terminal style); only prose is translated.
+// ============================================================
+
 const translations = {
   uk: {
-    nav: {
-      home: 'Головна',
-      projects: 'Проекти',
-      strengths: 'Сильні сторони'
-    },
     home: {
       subtitle: 'Security-minded Developer & Automation Engineer',
       description: 'Будую Telegram-боти, веб-сервіси та інструменти кібербезпеки: анти-фішинг, моніторинг загроз (OSINT), шифрування сесій і аналіз систем. Python, Swift, FastAPI.',
-      techStack: 'Tech Stack',
       contacts: 'Контакти',
-      status: 'Доступний для проектів'
+      status: 'доступний для проектів'
     },
     projects: {
-      title: 'Мої проекти',
-      subtitle: 'Портфоліо розробок',
-      comingSoonTitle: 'Скоро тут буде портфоліо',
-      comingSoonText: 'Наразі готую детальний опис проектів. Перегляньте мій GitHub для поточних розробок.',
-      viewGithub: 'Переглянути GitHub'
+      subtitle: 'Інструменти безпеки, боти та сервіси'
     },
     strengths: {
-      title: 'Сильні сторони',
       subtitle: 'Профіль та спеціалізація',
-      profileBadges: {
-        leader: 'Соціальний лідер',
-        praktik: 'Практик-адаптив',
-        organizer: 'Організатор'
-      },
+      profileBadges: { leader: 'Соціальний лідер', praktik: 'Практик-адаптив', organizer: 'Організатор' },
       coreTitle: 'Ключові якості',
       coreStrengths: {
-        ideator: {
-          title: 'Придумую рішення',
-          desc: 'Люблю знаходити нестандартні способи вирішення проблем'
-        },
-        networker: {
-          title: 'Легко спілкуюсь',
-          desc: 'Можу домовитись з людьми та пояснити складні речі простими словами'
-        },
-        analyst: {
-          title: 'Аналізую ситуацію',
-          desc: 'Дивлюсь на проблему з різних сторін перед тим, як приймати рішення'
-        }
+        ideator:   { title: 'Придумую рішення', desc: 'Люблю знаходити нестандартні способи вирішення проблем' },
+        networker: { title: 'Легко спілкуюсь', desc: 'Можу домовитись з людьми та пояснити складні речі простими словами' },
+        analyst:   { title: 'Аналізую ситуацію', desc: 'Дивлюсь на проблему з різних сторін перед тим, як приймати рішення' }
       },
       greenFlagsTitle: 'Мені підходить робота, де:',
       greenFlags: [
@@ -53,63 +33,30 @@ const translations = {
       ],
       bestMatchTitle: 'Які позиції мені найбільше пасують',
       bestMatch: [
-        {
-          title: 'Консультант з кібербезпеки',
-          desc: 'Спілкування з клієнтами + технічні знання + вміння переконувати. Допомагаю компаніям захистити їхні системи.'
-        },
-        {
-          title: 'Менеджер реагування на інциденти',
-          desc: 'Швидко реагую на проблеми безпеки, організовую команду та веду розслідування. Робота в стресових ситуаціях.'
-        },
-        {
-          title: 'ІТ бізнес-аналітик',
-          desc: 'З\'єдную технічну частину з бізнесом. Аналізую потреби, шукаю рішення та презентую їх керівництву.'
-        }
+        { title: 'Консультант з кібербезпеки', desc: 'Спілкування з клієнтами + технічні знання + вміння переконувати. Допомагаю компаніям захистити їхні системи.' },
+        { title: 'Менеджер реагування на інциденти', desc: 'Швидко реагую на проблеми безпеки, організовую команду та веду розслідування. Робота в стресових ситуаціях.' },
+        { title: 'ІТ бізнес-аналітик', desc: 'З\'єдную технічну частину з бізнесом. Аналізую потреби, шукаю рішення та презентую їх керівництву.' }
       ]
     }
   },
   en: {
-    nav: {
-      home: 'Home',
-      projects: 'Projects',
-      strengths: 'Strengths'
-    },
     home: {
       subtitle: 'Security-minded Developer & Automation Engineer',
       description: 'Building Telegram bots, web services, and cybersecurity tooling: anti-phishing, OSINT threat monitoring, session encryption, and system analysis. Python, Swift, FastAPI.',
-      techStack: 'Tech Stack',
       contacts: 'Contacts',
-      status: 'Available for projects'
+      status: 'available for work'
     },
     projects: {
-      title: 'My Projects',
-      subtitle: 'Development Portfolio',
-      comingSoonTitle: 'Portfolio coming soon',
-      comingSoonText: 'Currently preparing detailed project descriptions. Check my GitHub for current work.',
-      viewGithub: 'View GitHub'
+      subtitle: 'Security tooling, bots & services'
     },
     strengths: {
-      title: 'Strengths',
       subtitle: 'Profile and Specialization',
-      profileBadges: {
-        leader: 'Social Leader',
-        praktik: 'Adaptive Practitioner',
-        organizer: 'Organizer'
-      },
+      profileBadges: { leader: 'Social Leader', praktik: 'Adaptive Practitioner', organizer: 'Organizer' },
       coreTitle: 'Core Qualities',
       coreStrengths: {
-        ideator: {
-          title: 'Problem Solver',
-          desc: 'I love finding creative solutions to challenges'
-        },
-        networker: {
-          title: 'Communicator',
-          desc: 'I can negotiate with people and explain complex things simply'
-        },
-        analyst: {
-          title: 'Strategic Thinker',
-          desc: 'I look at problems from different angles before deciding'
-        }
+        ideator:   { title: 'Problem Solver', desc: 'I love finding creative solutions to challenges' },
+        networker: { title: 'Communicator', desc: 'I can negotiate with people and explain complex things simply' },
+        analyst:   { title: 'Strategic Thinker', desc: 'I look at problems from different angles before deciding' }
       },
       greenFlagsTitle: 'I thrive in work that:',
       greenFlags: [
@@ -121,206 +68,123 @@ const translations = {
       ],
       bestMatchTitle: 'Best roles for me',
       bestMatch: [
-        {
-          title: 'Cybersecurity Consultant',
-          desc: 'Client communication + technical knowledge + persuasion. Helping companies protect their systems.'
-        },
-        {
-          title: 'Incident Response Manager',
-          desc: 'Quick response to security issues, team coordination, investigations. High-pressure environment work.'
-        },
-        {
-          title: 'IT Business Analyst',
-          desc: 'Bridge between tech and business. Analyze needs, find solutions, present them to leadership.'
-        }
+        { title: 'Cybersecurity Consultant', desc: 'Client communication + technical knowledge + persuasion. Helping companies protect their systems.' },
+        { title: 'Incident Response Manager', desc: 'Quick response to security issues, team coordination, investigations. High-pressure environment work.' },
+        { title: 'IT Business Analyst', desc: 'Bridge between tech and business. Analyze needs, find solutions, present them to leadership.' }
       ]
     }
   }
 };
 
-// Get current language from localStorage or default to Ukrainian
-function getCurrentLanguage() {
-  return localStorage.getItem('language') || 'uk';
-}
+function getCurrentLanguage() { return localStorage.getItem('language') || 'uk'; }
 
-// Set language
 function setLanguage(lang) {
   localStorage.setItem('language', lang);
   updateLanguageUI(lang);
   updateContent(lang);
 }
 
-// Update language UI (active button)
 function updateLanguageUI(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  document.documentElement.setAttribute('lang', lang);
 }
 
-// Update content based on language
+function setText(sel, text) {
+  const el = document.querySelector(sel);
+  if (el) el.textContent = text;
+}
+
 function updateContent(lang) {
   const t = translations[lang];
   const page = document.body.dataset.page;
-
-  // Update navigation
-  const navLinks = document.querySelectorAll('.nav-link');
-  if (navLinks[0]) navLinks[0].textContent = t.nav.home;
-  if (navLinks[1]) navLinks[1].textContent = t.nav.projects;
-  if (navLinks[2]) navLinks[2].textContent = t.nav.strengths;
-
-  // Page-specific updates
-  if (page === 'home') {
-    updateHomePage(t.home);
-  } else if (page === 'projects') {
-    updateProjectsPage(t.projects);
-  } else if (page === 'strengths') {
-    updateStrengthsPage(t.strengths);
-  }
+  if (page === 'home') updateHome(t.home);
+  else if (page === 'projects') updateProjects(t.projects);
+  else if (page === 'strengths') updateStrengths(t.strengths);
 }
 
-// Update home page content
-function updateHomePage(t) {
-  const subtitle = document.querySelector('.subtitle');
-  const description = document.querySelector('.description-text');
-  const techStackTitle = document.querySelector('.skills .section-title');
-  const contactsTitle = document.querySelector('.contacts').previousElementSibling;
-  const status = document.querySelector('.status');
-
-  if (subtitle) subtitle.innerHTML = `<i data-lucide="code-2" width="18" height="18"></i>${t.subtitle}`;
-  if (description) description.textContent = t.description;
-  if (techStackTitle) techStackTitle.innerHTML = `<i data-lucide="zap" width="16" height="16" style="color: #00ff9c;"></i>${t.techStack}`;
-  if (contactsTitle) contactsTitle.textContent = t.contacts;
-  if (status) status.innerHTML = `<div class="status-dot"></div>${t.status}`;
-
-  // Reinitialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+function updateHome(t) {
+  setText('.i18n-subtitle', t.subtitle);
+  setText('.description-text', t.description);
+  setText('.i18n-contacts', t.contacts);
+  setText('.i18n-status', t.status);
 }
 
-// Update projects page content
-function updateProjectsPage(t) {
-  const pageTitle = document.querySelector('.header .name');
-  const subtitle = document.querySelector('.subtitle');
-  const comingSoonTitle = document.querySelector('.coming-soon-title');
-  const comingSoonText = document.querySelector('.coming-soon-text');
-  const githubBtn = document.querySelector('.contact-btn-github');
-
-  if (pageTitle) pageTitle.textContent = t.title;
-  if (subtitle) subtitle.innerHTML = `<i data-lucide="code-2" width="18" height="18"></i>${t.subtitle}`;
-  if (comingSoonTitle) comingSoonTitle.textContent = t.comingSoonTitle;
-  if (comingSoonText) comingSoonText.textContent = t.comingSoonText;
-  if (githubBtn) githubBtn.innerHTML = `<i data-lucide="github" width="20" height="20"></i>${t.viewGithub}`;
-
-  // Reinitialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+function updateProjects(t) {
+  setText('.i18n-subtitle', t.subtitle);
 }
 
-// Update strengths page content
-function updateStrengthsPage(t) {
-  const pageTitle = document.querySelector('.header .name');
-  const subtitle = document.querySelector('.subtitle');
+function updateStrengths(t) {
+  setText('.i18n-subtitle', t.subtitle);
 
-  if (pageTitle) pageTitle.textContent = t.title;
-  if (subtitle) subtitle.innerHTML = `<i data-lucide="sparkles" width="18" height="18"></i>${t.subtitle}`;
+  const badges = document.querySelectorAll('.profile-badge .i18n-badge');
+  if (badges[0]) badges[0].textContent = t.profileBadges.leader;
+  if (badges[1]) badges[1].textContent = t.profileBadges.praktik;
+  if (badges[2]) badges[2].textContent = t.profileBadges.organizer;
 
-  // Profile badges
-  const badges = document.querySelectorAll('.profile-badge');
-  if (badges[0]) badges[0].innerHTML = `<i data-lucide="users" width="20" height="20"></i>${t.profileBadges.leader}`;
-  if (badges[1]) badges[1].innerHTML = `<i data-lucide="zap" width="20" height="20"></i>${t.profileBadges.praktik}`;
-  if (badges[2]) badges[2].innerHTML = `<i data-lucide="settings" width="20" height="20"></i>${t.profileBadges.organizer}`;
+  setText('.i18n-core-title', t.coreTitle);
 
-  // Core strengths title
-  const coreTitle = document.querySelector('.section-title');
-  if (coreTitle) coreTitle.innerHTML = `<i data-lucide="star" width="16" height="16" style="color: #00ff9c;"></i>${t.coreTitle}`;
-
-  // Core strengths cards
-  const strengthCards = document.querySelectorAll('.strength-card');
-  const strengthData = [t.coreStrengths.ideator, t.coreStrengths.networker, t.coreStrengths.analyst];
-  strengthCards.forEach((card, i) => {
+  const cards = document.querySelectorAll('.strength-card');
+  const data = [t.coreStrengths.ideator, t.coreStrengths.networker, t.coreStrengths.analyst];
+  cards.forEach((card, i) => {
+    if (!data[i]) return;
     const title = card.querySelector('.strength-title');
     const desc = card.querySelector('.strength-desc');
-    if (title) title.textContent = strengthData[i].title;
-    if (desc) desc.textContent = strengthData[i].desc;
+    if (title) title.textContent = data[i].title;
+    if (desc) desc.textContent = data[i].desc;
   });
 
-  // Green flags
-  const greenFlagsTitle = document.querySelector('.flags-section .section-title');
-  if (greenFlagsTitle) greenFlagsTitle.innerHTML = `<i data-lucide="check-circle" width="16" height="16" style="color: #00ff7f;"></i>${t.greenFlagsTitle}`;
-
-  const flagTitle = document.querySelector('.flag-title');
-  if (flagTitle) flagTitle.innerHTML = `<i data-lucide="check-circle" width="20" height="20"></i>${t.greenFlagsTitle}`;
-
+  setText('.i18n-flags-title', t.greenFlagsTitle);
+  const flagTitleText = document.querySelector('.flag-title .i18n-flags-title-inline');
+  if (flagTitleText) flagTitleText.textContent = t.greenFlagsTitle;
   const flagList = document.querySelector('.flag-list');
-  if (flagList) {
-    flagList.innerHTML = t.greenFlags.map(flag => `<li>${flag}</li>`).join('');
-  }
+  if (flagList) flagList.innerHTML = t.greenFlags.map(f => `<li>${f}</li>`).join('');
 
-  // Best match roles
-  const rolesTitle = document.querySelector('.roles-section .section-title');
-  if (rolesTitle) rolesTitle.innerHTML = `<i data-lucide="target" width="16" height="16" style="color: #00ff9c;"></i>${t.bestMatchTitle}`;
-
+  setText('.i18n-roles-title', t.bestMatchTitle);
   const roleCards = document.querySelectorAll('.role-card');
   roleCards.forEach((card, i) => {
+    if (!t.bestMatch[i]) return;
     const title = card.querySelector('.role-title');
     const desc = card.querySelector('.role-desc');
     if (title) title.textContent = t.bestMatch[i].title;
     if (desc) desc.textContent = t.bestMatch[i].desc;
   });
-
-  // Reinitialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 
-  // Set up language switcher
   const currentLang = getCurrentLanguage();
   updateLanguageUI(currentLang);
   updateContent(currentLang);
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      setLanguage(btn.dataset.lang);
-    });
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
 
-  // Mouse parallax effect
+  // subtle parallax on the background grid
   document.addEventListener('mousemove', (e) => {
     const grid = document.querySelector('.bg-grid');
-    if (grid) {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      grid.style.transform = `translate(${x}px, ${y}px)`;
-    }
+    if (!grid) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 14;
+    const y = (e.clientY / window.innerHeight - 0.5) * 14;
+    grid.style.transform = `translate(${x}px, ${y}px)`;
   });
 
-  // Glitch effect on name
-  const nameElement = document.querySelector('.name');
-  if (nameElement && document.body.dataset.page === 'home') {
+  // occasional name glitch on home
+  const name = document.querySelector('.name');
+  if (name && document.body.dataset.page === 'home') {
     setInterval(() => {
-      nameElement.classList.add('glitch');
-      setTimeout(() => {
-        nameElement.classList.remove('glitch');
-      }, 200);
-    }, 8000);
+      name.classList.add('glitch');
+      setTimeout(() => name.classList.remove('glitch'), 250);
+    }, 7000);
   }
 
-  // Active navigation link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // active nav link by filename
+  const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
+    if (href === page || (page === '' && href === 'index.html')) link.classList.add('active');
   });
 });

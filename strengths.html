@@ -3,107 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сильні сторони - FixerHack</title>
-  <meta name="description" content="Професійний профіль та сильні сторони FixerHack в ІТ та кібербезпеці">
-  
-  <!-- Lucide Icons -->
+  <title>Сильні сторони — FixerHack</title>
+  <meta name="description" content="Професійний профіль та сильні сторони FixerHack в ІТ та кібербезпеці.">
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="strengths">
   <div class="bg-grid"></div>
   <div class="glow-orb-1"></div>
   <div class="glow-orb-2"></div>
+  <div class="scanlines"></div>
 
-  <div class="card">
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Головна</a>
-        <a href="projects.html" class="nav-link">Проекти</a>
-        <a href="strengths.html" class="nav-link active">Сильні сторони</a>
-        <a href="stark.html">Stark Edition</a>
-      </div>
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/<span class="u">strengths</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link">projects</a>
+      <a href="strengths.html" class="nav-link active">strengths</a>
+      <a href="stark.html" class="nav-link">kitty</a>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="uk">UA</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </nav>
+  </header>
 
-    <!-- Header -->
+  <main class="card">
     <div class="header">
-      <div class="header-top">
-        <i data-lucide="sparkles" class="icon-terminal" width="48" height="48"></i>
-        <div>
-          <h1 class="name">Сильні сторони</h1>
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/strengths</span>
+          <span class="term-badge">profile</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~$</span><span class="ret">cat strengths.md</span></p>
+          <h1 class="name">Сильні <span class="accent">сторони</span></h1>
           <p class="subtitle">
             <i data-lucide="sparkles" width="18" height="18"></i>
-            Профіль та спеціалізація
+            <span class="i18n-subtitle">Профіль та спеціалізація</span>
+            <span class="cursor"></span>
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Profile Badges -->
     <div class="profile-badges">
-      <div class="profile-badge">
-        <i data-lucide="users" width="20" height="20"></i>
-        Соціальний лідер
-      </div>
-      <div class="profile-badge">
-        <i data-lucide="zap" width="20" height="20"></i>
-        Практик-адаптив
-      </div>
-      <div class="profile-badge">
-        <i data-lucide="settings" width="20" height="20"></i>
-        Організатор
-      </div>
+      <div class="profile-badge"><i data-lucide="users" width="18" height="18"></i><span class="i18n-badge">Соціальний лідер</span></div>
+      <div class="profile-badge"><i data-lucide="zap" width="18" height="18"></i><span class="i18n-badge">Практик-адаптив</span></div>
+      <div class="profile-badge"><i data-lucide="settings" width="18" height="18"></i><span class="i18n-badge">Організатор</span></div>
     </div>
 
-    <!-- Core Strengths -->
-    <div class="skills">
+    <div class="module">
       <h2 class="section-title">
-        <i data-lucide="star" width="16" height="16" style="color: #00ff9c;"></i>
-        Ключові якості
+        <i data-lucide="star" width="15" height="15"></i>
+        <span class="i18n-core-title">Ключові якості</span>
       </h2>
       <div class="strengths-grid">
         <div class="strength-card">
           <div class="strength-icon">🎯</div>
           <h3 class="strength-title">Придумую рішення</h3>
-          <p class="strength-desc">
-            Люблю знаходити нестандартні способи вирішення проблем
-          </p>
+          <p class="strength-desc">Люблю знаходити нестандартні способи вирішення проблем</p>
         </div>
         <div class="strength-card">
           <div class="strength-icon">🤝</div>
           <h3 class="strength-title">Легко спілкуюсь</h3>
-          <p class="strength-desc">
-            Можу домовитись з людьми та пояснити складні речі простими словами
-          </p>
+          <p class="strength-desc">Можу домовитись з людьми та пояснити складні речі простими словами</p>
         </div>
         <div class="strength-card">
           <div class="strength-icon">📊</div>
           <h3 class="strength-title">Аналізую ситуацію</h3>
-          <p class="strength-desc">
-            Дивлюсь на проблему з різних сторін перед тим, як приймати рішення
-          </p>
+          <p class="strength-desc">Дивлюсь на проблему з різних сторін перед тим, як приймати рішення</p>
         </div>
       </div>
     </div>
 
-    <!-- Green Flags -->
-    <div class="flags-section">
+    <div class="flags-section module">
       <h2 class="section-title">
-        <i data-lucide="check-circle" width="16" height="16" style="color: #00ff7f;"></i>
-        Мені підходить робота, де:
+        <i data-lucide="check-circle" width="15" height="15"></i>
+        <span class="i18n-flags-title">Мені підходить робота, де:</span>
       </h2>
       <div class="flags-grid">
         <div class="flag-card green">
           <h3 class="flag-title green">
-            <i data-lucide="check-circle" width="20" height="20"></i>
-            Комфортна робоча атмосфера
+            <i data-lucide="check-circle" width="18" height="18"></i>
+            <span class="i18n-flags-title-inline">Комфортна робоча атмосфера</span>
           </h3>
           <ul class="flag-list">
             <li>Швидкий темп - треба реагувати та приймати рішення на ходу</li>
@@ -116,39 +103,39 @@
       </div>
     </div>
 
-    <!-- Best Match Roles -->
-    <div class="roles-section">
+    <div class="roles-section module">
       <h2 class="section-title">
-        <i data-lucide="target" width="16" height="16" style="color: #00ff9c;"></i>
-        Які позиції мені найбільше пасують
+        <i data-lucide="target" width="15" height="15"></i>
+        <span class="i18n-roles-title">Які позиції мені найбільше пасують</span>
       </h2>
       <div class="roles-grid">
         <div class="role-card">
           <div class="role-number">1</div>
           <h3 class="role-title">Консультант з кібербезпеки</h3>
-          <p class="role-desc">
-            Спілкування з клієнтами + технічні знання + вміння переконувати. Допомагаю компаніям захистити їхні системи.
-          </p>
+          <p class="role-desc">Спілкування з клієнтами + технічні знання + вміння переконувати. Допомагаю компаніям захистити їхні системи.</p>
         </div>
         <div class="role-card">
           <div class="role-number">2</div>
           <h3 class="role-title">Менеджер реагування на інциденти</h3>
-          <p class="role-desc">
-            Швидко реагую на проблеми безпеки, організовую команду та веду розслідування. Робота в стресових ситуаціях.
-          </p>
+          <p class="role-desc">Швидко реагую на проблеми безпеки, організовую команду та веду розслідування. Робота в стресових ситуаціях.</p>
         </div>
         <div class="role-card">
           <div class="role-number">3</div>
           <h3 class="role-title">ІТ бізнес-аналітик</h3>
-          <p class="role-desc">
-            З'єдную технічну частину з бізнесом. Аналізую потреби, шукаю рішення та презентую їх керівництву.
-          </p>
+          <p class="role-desc">З'єдную технічну частину з бізнесом. Аналізую потреби, шукаю рішення та презентую їх керівництву.</p>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Scripts -->
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> profile loaded</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
