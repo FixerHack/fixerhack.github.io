@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserTGBot Platform — FixerHack</title>
+  <meta name="description" content="Платформа Telegram-userbot із незалежних сервісів на спільній Postgres-схемі.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+  <div class="bg-grid"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/projects/<span class="u">usertgbot</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+      <a href="strengths.html" class="nav-link">strengths</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uk">UA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="card">
+    <a href="projects.html" class="back-link">projects</a>
+
+    <div class="header">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/projects/usertgbot</span>
+          <span class="term-badge">active</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~$</span><span class="ret">cat usertgbot/README.md</span></p>
+          <div class="proj-title-row">
+            <i data-lucide="users" class="proj-icon" width="32" height="32"></i>
+            <h1 class="name">UserTGBot Platform</h1>
+            <span class="project-source oss">Open-source</span>
+          </div>
+          <p class="subtitle"><i data-lucide="chevron-right" width="18" height="18"></i>Платформа Telegram-userbot із незалежних сервісів на спільній Postgres-схемі.</p>
+          <div class="proj-actions">
+          <a class="contact-btn contact-btn-github" href="https://github.com/FixerHack/usertgbot" target="_blank" rel="noopener noreferrer"><i data-lucide="github" width="17" height="17"></i> GitHub</a>
+          <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="info" width="15" height="15"></i>Overview</h2>
+      <div class="spec-grid">
+        <div class="spec-cell"><div class="spec-k">Тип</div><div class="spec-v">Multi-service платформа</div></div>
+        <div class="spec-cell"><div class="spec-k">Стек</div><div class="spec-v">Python · Telethon · aiogram</div></div>
+        <div class="spec-cell"><div class="spec-k">БД</div><div class="spec-v">PostgreSQL · SQLAlchemy 2.0</div></div>
+        <div class="spec-cell"><div class="spec-k">Статус</div><div class="spec-v ok">Active</div></div>
+        <div class="spec-cell"><div class="spec-k">Оплати</div><div class="spec-v">Telegram Stars · Crypto Pay</div></div>
+        <div class="spec-cell"><div class="spec-k">Мови UI</div><div class="spec-v">UK / RU / EN</div></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="file-text" width="15" height="15"></i>Про проект</h2>
+      <div class="prose">
+          <p>Платформа, поділена на сервіси, що розгортаються незалежно й поділяють одну Postgres-схему. Користувач підписується через бота, під'єднує власний акаунт Telegram і отримує набір in-chat <code>.</code>-команд та персональний «manager bot» зі стрічкою подій.</p>
+          <p>Логін обходить блокування коду всередині Telegram через інлайн-клавіатуру, а експортована Telethon-сесія шифрується (Fernet) перед записом у БД.</p>
+          </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="list-checks" width="15" height="15"></i>Ключові можливості<span class="count">[ 6 ]</span></h2>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-head"><i data-lucide="credit-card" class="fi" width="18" height="18"></i><span class="feature-title">Тарифи й оплати</span></div><p class="feature-desc">Standard / Pro / Premium; ціни рахуються за курсом НБУ, оплата Stars або Crypto Pay.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="lock" class="fi" width="18" height="18"></i><span class="feature-title">Шифрування сесій</span></div><p class="feature-desc">Telethon-сесія шифрується Fernet перед збереженням у базу.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="terminal" class="fi" width="18" height="18"></i><span class="feature-title">In-chat команди</span></div><p class="feature-desc">.info / .me / .ban / .check з квотами — з під&#x27;єднаного акаунта.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="inbox" class="fi" width="18" height="18"></i><span class="feature-title">Manager-bot фід</span></div><p class="feature-desc">Видалені/редаговані повідомлення, автовідповідач, one-time медіа.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="bar-chart-3" class="fi" width="18" height="18"></i><span class="feature-title">Адмін-панель</span></div><p class="feature-desc">Метрики, підписки за тарифами, графік активності, картки юзерів.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="languages" class="fi" width="18" height="18"></i><span class="feature-title">i18n</span></div><p class="feature-desc">UK / RU / EN, вибір за language_code Telegram.</p></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="layers" width="15" height="15"></i>Tech Stack</h2>
+      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Telethon</span><span class="project-tag">aiogram</span><span class="project-tag">FastAPI</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Docker</span><span class="project-tag">Fernet</span></div>
+    </div>
+  </main>
+
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> python · tg platform</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

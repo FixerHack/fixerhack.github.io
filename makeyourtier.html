@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakeYourTier — FixerHack</title>
+  <meta name="description" content="Реалтайм тір-лист мейкер без реклами й реєстрації, зі спільною дошкою.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+  <div class="bg-grid"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/projects/<span class="u">makeyourtier</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+      <a href="strengths.html" class="nav-link">strengths</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uk">UA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="card">
+    <a href="projects.html" class="back-link">projects</a>
+
+    <div class="header">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/projects/makeyourtier</span>
+          <span class="term-badge">active</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~$</span><span class="ret">cat makeyourtier/README.md</span></p>
+          <div class="proj-title-row">
+            <i data-lucide="list-ordered" class="proj-icon" width="32" height="32"></i>
+            <h1 class="name">MakeYourTier</h1>
+            <span class="project-source oss">Open-source</span>
+          </div>
+          <p class="subtitle"><i data-lucide="chevron-right" width="18" height="18"></i>Реалтайм тір-лист мейкер без реклами й реєстрації, зі спільною дошкою.</p>
+          <div class="proj-actions">
+          <a class="contact-btn contact-btn-github" href="https://github.com/FixerHack/makeyourtier" target="_blank" rel="noopener noreferrer"><i data-lucide="github" width="17" height="17"></i> GitHub</a>
+          <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="info" width="15" height="15"></i>Overview</h2>
+      <div class="spec-grid">
+        <div class="spec-cell"><div class="spec-k">Тип</div><div class="spec-v">Реалтайм веб-застосунок</div></div>
+        <div class="spec-cell"><div class="spec-k">Backend</div><div class="spec-v">Python · aiohttp</div></div>
+        <div class="spec-cell"><div class="spec-k">Realtime</div><div class="spec-v">WebSocket</div></div>
+        <div class="spec-cell"><div class="spec-k">Статус</div><div class="spec-v ok">Active</div></div>
+        <div class="spec-cell"><div class="spec-k">Frontend</div><div class="spec-v">Vanilla JS</div></div>
+        <div class="spec-cell"><div class="spec-k">Вхід</div><div class="spec-v">Без реєстрації</div></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="file-text" width="15" height="15"></i>Про проект</h2>
+      <div class="prose">
+          <p>Тір-лист мейкер без реклами й реєстрації. Усі учасники перетягують на одній спільній дошці, бачать курсори одне одного й хто що тримає.</p>
+          <p>Кожен може голосувати сам, а режим «Результати» зводить голоси у відсотки. Вхід — одноразовим ніком; власник визначається секретним ключем у браузері.</p>
+          </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="list-checks" width="15" height="15"></i>Ключові можливості<span class="count">[ 6 ]</span></h2>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-head"><i data-lucide="mouse-pointer-2" class="fi" width="18" height="18"></i><span class="feature-title">Live-дошка</span></div><p class="feature-desc">Спільне перетягування з курсорами учасників у реальному часі.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="vote" class="fi" width="18" height="18"></i><span class="feature-title">Голосування</span></div><p class="feature-desc">Особистий розклад + зведені результати у відсотках.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="shield" class="fi" width="18" height="18"></i><span class="feature-title">Модерація</span></div><p class="feature-desc">Передача ролі модератора, права, бан по IP і браузеру.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="image" class="fi" width="18" height="18"></i><span class="feature-title">Картинки</span></div><p class="feature-desc">Файли, drag&amp;drop, Ctrl+V, за посиланням; текстові картки.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="qr-code" class="fi" width="18" height="18"></i><span class="feature-title">Запрошення</span></div><p class="feature-desc">QR-код і адмін-посилання для співвласника.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="download" class="fi" width="18" height="18"></i><span class="feature-title">Експорт</span></div><p class="feature-desc">PNG, експорт/імпорт JSON, публічна галерея шаблонів.</p></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="layers" width="15" height="15"></i>Tech Stack</h2>
+      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">aiohttp</span><span class="project-tag">WebSocket</span><span class="project-tag">Vanilla JS</span></div>
+    </div>
+  </main>
+
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> python · websocket app</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

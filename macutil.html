@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacUtil — FixerHack</title>
+  <meta name="description" content="Cleaner, оптимізатор і аналізатор безпеки для macOS — нативний Swift/SwiftUI, без телеметрії.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+  <div class="bg-grid"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/projects/<span class="u">macutil</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+      <a href="strengths.html" class="nav-link">strengths</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uk">UA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="card">
+    <a href="projects.html" class="back-link">projects</a>
+
+    <div class="header">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/projects/macutil</span>
+          <span class="term-badge">released</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~$</span><span class="ret">cat macutil/README.md</span></p>
+          <div class="proj-title-row">
+            <i data-lucide="shield-check" class="proj-icon" width="32" height="32"></i>
+            <h1 class="name">MacUtil</h1>
+            <span class="project-source oss">Open-source</span>
+          </div>
+          <p class="subtitle"><i data-lucide="chevron-right" width="18" height="18"></i>Cleaner, оптимізатор і аналізатор безпеки для macOS — нативний Swift/SwiftUI, без телеметрії.</p>
+          <div class="proj-actions">
+          <a class="contact-btn contact-btn-github" href="https://github.com/FixerHack/MacUtil" target="_blank" rel="noopener noreferrer"><i data-lucide="github" width="17" height="17"></i> GitHub</a>
+          <a class="contact-btn contact-btn-email" href="https://github.com/FixerHack/homebrew-macutil" target="_blank" rel="noopener noreferrer"><i data-lucide="package" width="17" height="17"></i> Homebrew tap</a>
+          <a class="btn-ghost" href="https://github.com/FixerHack/MacUtil/releases/latest" target="_blank" rel="noopener noreferrer"><i data-lucide="download" width="17" height="17"></i> Releases</a>
+          <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="info" width="15" height="15"></i>Overview</h2>
+      <div class="spec-grid">
+        <div class="spec-cell"><div class="spec-k">Тип</div><div class="spec-v">Застосунок macOS 14+</div></div>
+        <div class="spec-cell"><div class="spec-k">Стек</div><div class="spec-v">Swift / SwiftUI</div></div>
+        <div class="spec-cell"><div class="spec-k">Статус</div><div class="spec-v ok">Released</div></div>
+        <div class="spec-cell"><div class="spec-k">Ліцензія</div><div class="spec-v">GPL-3.0</div></div>
+        <div class="spec-cell"><div class="spec-k">Встановлення</div><div class="spec-v">Homebrew</div></div>
+        <div class="spec-cell"><div class="spec-k">Платформи</div><div class="spec-v">Apple Silicon + Intel</div></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="file-text" width="15" height="15"></i>Про проект</h2>
+      <div class="prose">
+          <p>MacUtil — безкоштовний відкритий інструмент для прибирання, оптимізації та аналізу безпеки macOS у дусі CleanMyMac, OnyX та утиліт Objective-See. Написаний повністю нативно на Swift і SwiftUI.</p>
+          <p>Жодної телеметрії та підписок: застосунок працює локально, а оновлення встановлюються самі зсередини. Ставиться однією командою через Homebrew (<code>brew tap fixerhack/macutil &amp;&amp; brew install macutil</code>).</p>
+          </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="list-checks" width="15" height="15"></i>Ключові можливості<span class="count">[ 6 ]</span></h2>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-head"><i data-lucide="map" class="fi" width="18" height="18"></i><span class="feature-title">Space Lens</span></div><p class="feature-desc">Візуальна мапа того, що займає диск — швидко видно великі теки й файли.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="trash-2" class="fi" width="18" height="18"></i><span class="feature-title">Прибирання</span></div><p class="feature-desc">Пошук і безпечне видалення кешів, логів та сміття, яке залишають програми.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="gauge" class="fi" width="18" height="18"></i><span class="feature-title">Оптимізація</span></div><p class="feature-desc">Інструменти для прискорення та обслуговування системи.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="shield" class="fi" width="18" height="18"></i><span class="feature-title">Аналіз безпеки</span></div><p class="feature-desc">Перевірка стану системи й потенційних ризиків у стилі Objective-See.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="refresh-cw" class="fi" width="18" height="18"></i><span class="feature-title">Авто-оновлення</span></div><p class="feature-desc">Нові версії ставляться самі, без повторного обходу Gatekeeper.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="eye-off" class="fi" width="18" height="18"></i><span class="feature-title">Без телеметрії</span></div><p class="feature-desc">Жодного збору даних, жодних підписок — усе локально.</p></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="layers" width="15" height="15"></i>Tech Stack</h2>
+      <div class="project-tags"><span class="project-tag">Swift</span><span class="project-tag">SwiftUI</span><span class="project-tag">macOS Security</span><span class="project-tag">Homebrew</span><span class="project-tag">GPL-3.0</span></div>
+    </div>
+  </main>
+
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> swift · macos app</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tension Index — FixerHack</title>
+  <meta name="description" content="OSINT-моніторинг сигналів ескалації для 38 країн Європи за шкалою 0–10.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="projects">
+  <div class="bg-grid"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="mark">◆</span> fixerhack
+      <span class="brand-path">:~/projects/<span class="u">tension-index</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+      <a href="strengths.html" class="nav-link">strengths</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uk">UA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="card">
+    <a href="projects.html" class="back-link">projects</a>
+
+    <div class="header">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-name">fixerhack@sec — ~/projects/tension-index</span>
+          <span class="term-badge">active</span>
+        </div>
+        <div class="term-body">
+          <p class="tline"><span class="pr"><span class="u">fixerhack</span>@sec:~$</span><span class="ret">cat tension-index/README.md</span></p>
+          <div class="proj-title-row">
+            <i data-lucide="radar" class="proj-icon" width="32" height="32"></i>
+            <h1 class="name">Tension Index</h1>
+            <span class="project-source oss">Open-source</span>
+          </div>
+          <p class="subtitle"><i data-lucide="chevron-right" width="18" height="18"></i>OSINT-моніторинг сигналів ескалації для 38 країн Європи за шкалою 0–10.</p>
+          <div class="proj-actions">
+          <a class="contact-btn contact-btn-github" href="https://github.com/FixerHack/war-predictor" target="_blank" rel="noopener noreferrer"><i data-lucide="github" width="17" height="17"></i> GitHub</a>
+          <a class="contact-btn contact-btn-email" href="https://fixerhack.github.io/war-predictor/dashboard/" target="_blank" rel="noopener noreferrer"><i data-lucide="map" width="17" height="17"></i> Публічна панель</a>
+          <a class="btn-ghost" href="https://fixerhack.github.io/war-predictor/" target="_blank" rel="noopener noreferrer"><i data-lucide="activity" width="17" height="17"></i> Прогрес</a>
+          <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="info" width="15" height="15"></i>Overview</h2>
+      <div class="spec-grid">
+        <div class="spec-cell"><div class="spec-k">Тип</div><div class="spec-v">Telegram-бот + пайплайн</div></div>
+        <div class="spec-cell"><div class="spec-k">Стек</div><div class="spec-v">Python 3.12 · aiogram 3</div></div>
+        <div class="spec-cell"><div class="spec-k">Сховище</div><div class="spec-v">SQLite</div></div>
+        <div class="spec-cell"><div class="spec-k">Статус</div><div class="spec-v ok">Active</div></div>
+        <div class="spec-cell"><div class="spec-k">Країни</div><div class="spec-v">ЄС-27 + 11 (38)</div></div>
+        <div class="spec-cell"><div class="spec-k">Класифікатор</div><div class="spec-v">Claude Haiku / LLM</div></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="file-text" width="15" height="15"></i>Про проект</h2>
+      <div class="prose">
+          <p>Індикатор стану сигналів ескалації: щодня збирає офіційні рекомендації урядів своїм громадянам (travel advisories), порівнює нові версії з попередніми, класифікує зміни і показує, що саме змінилося й скільки незалежних джерел це підтверджують.</p>
+          <p>Це індикатор стану сигналів, а не прогноз і не порада щодо виїзду. Статус війни береться з вручну перевіреного довідника на основі RULAC; щодня система звіряє його зі списком конфліктів і надсилає розбіжності адміну.</p>
+          </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="list-checks" width="15" height="15"></i>Ключові можливості<span class="count">[ 6 ]</span></h2>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-head"><i data-lucide="download-cloud" class="fi" width="18" height="18"></i><span class="feature-title">Збір джерел</span></div><p class="feature-desc">Щоденний збір travel advisories з усіх відстежуваних країн.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="git-compare" class="fi" width="18" height="18"></i><span class="feature-title">Diff версій</span></div><p class="feature-desc">Виявлення й класифікація змін між версіями рекомендацій.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="brain" class="fi" width="18" height="18"></i><span class="feature-title">LLM-класифікація</span></div><p class="feature-desc">Зміни класифікуються моделлю; редакційні правки відсіюються.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="bell" class="fi" width="18" height="18"></i><span class="feature-title">Сповіщення й дайджест</span></div><p class="feature-desc">Зміна рекомендації та балу своєю мовою, щоранковий дайджест.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="layout-panel-left" class="fi" width="18" height="18"></i><span class="feature-title">Інлайн-панель</span></div><p class="feature-desc">Бот редагується на місці: бал, причини, сусідство з конфліктом.</p></div>
+        <div class="feature-card"><div class="feature-head"><i data-lucide="map" class="fi" width="18" height="18"></i><span class="feature-title">Публічна карта</span></div><p class="feature-desc">Карта з балами й причинами по країнах на GitHub Pages.</p></div>
+        </div>
+    </div>
+
+    <div class="module">
+      <h2 class="section-title"><i data-lucide="layers" width="15" height="15"></i>Tech Stack</h2>
+      <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">aiogram 3</span><span class="project-tag">httpx</span><span class="project-tag">SQLite</span><span class="project-tag">OSINT</span><span class="project-tag">LLM</span><span class="project-tag">systemd</span></div>
+    </div>
+  </main>
+
+  <footer class="statusbar">
+    <span class="seg mode">NORMAL</span>
+    <span class="seg branch"><i data-lucide="git-branch" width="12" height="12"></i> <span class="b">main</span></span>
+    <span class="seg spacer"></span>
+    <span class="seg avail"><span class="dot"></span> python · osint pipeline</span>
+    <span class="seg utc">UA · UTC+2</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
